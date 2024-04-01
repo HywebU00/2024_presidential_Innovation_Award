@@ -459,15 +459,22 @@ section {
   background: #000;
   color: #fff;
   text-align: center;
-  padding: rem(10) 0;
+  padding: rem(10) rem(60);
   font-size: 1rem;
   letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
   span {
     margin: 0 0.75rem;
     display: inline-block;
     padding: 0.5rem 0.75rem;
     background: $colorPrimary;
     border-radius: 0.25rem;
+  }
+  &.none {
+    padding: 0 rem(60);
+    height: 0;
   }
   .close {
     text-indent: -9999px;
@@ -495,6 +502,9 @@ section {
       mask-size: 40%;
       background: #fff;
     }
+  }
+  @include screen('mobile') {
+    margin-top: 60px;
   }
 }
 .aboutSection {
@@ -837,10 +847,13 @@ section {
       }
       > a {
         display: flex;
+        @include screen('mobile') {
+          display: block;
+        }
       }
       .info {
         display: none;
-        padding: 6% 2% 6% 6%;
+        padding: 6% 2% 16% 6%;
         width: 70%;
         justify-content: space-between;
         align-items: center;
@@ -849,16 +862,19 @@ section {
       .more {
         display: none;
         position: absolute;
-        right: 0;
-        bottom: 0;
+        bottom: 13%;
+        right: 25%;
         span {
           display: block;
         }
       }
       .title {
+        font-size: 1.5em;
+        font-weight: 400;
+        margin: 0;
         span {
           display: block;
-          margin-top: 0.5rem;
+          margin-top: 0.75rem;
         }
       }
       .date {
@@ -866,7 +882,7 @@ section {
         text-align: center;
         font-size: 2.5em;
         .year {
-          margin-top: 0.5rem;
+          margin-top: 0.6rem;
           font-size: 1rem;
           display: block;
         }
@@ -879,7 +895,7 @@ section {
       // }
     }
     .swiper-slide-next {
-      // left: 3%;
+      left: 3%;
       // @include screen('mobile') {
       //   left: 6%;
       // }
@@ -891,14 +907,50 @@ section {
           display: none;
         }
       }
-      width: 83.5% !important;
-      // background-color: red;
+      width: 83.3% !important;
       position: relative;
       .more {
         display: block;
+        width: rem(112);
+        height: rem(112);
+        border: 2px solid;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: unset;
+        font-size: 1.2em;
+        font-weight: 600;
       }
       .info {
         display: flex;
+      }
+      @media screen and (max-width: 1024px) {
+        .more {
+          bottom: 0;
+        }
+      }
+      @include screen('tablet') {
+        width: 100% !important;
+        .info {
+          width: 80%;
+        }
+      }
+      @include screen('mobile') {
+        margin-bottom: 1rem;
+        .info {
+          min-height: rem(230);
+          width: 100%;
+          padding: 6% 3% 16% 3%;
+          margin-bottom: 1em;
+        }
+
+        .more {
+          right: 2%;
+          width: rem(90);
+          height: rem(90);
+          font-size: 1.15em;
+        }
       }
     }
   }

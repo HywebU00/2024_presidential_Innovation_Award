@@ -187,20 +187,23 @@ window.addEventListener('load', () => {
       prevEl: '.activitiesSection .prevSlider', //自行設定樣式
       disabledClass: '.activitiesSection .swiperArrow-disabled', //不可點選樣式
     },
-    // breakpoints: {
-    //   100: {
-    //     slidesPerView: 1,
-    //   },
-    //   575: {
-    //     slidesPerView: 1.5,
-    //   },
-    //   767: {
-    //     slidesPerView: 1.5,
-    //   },
-    //   1000: {
-    //     slidesPerView: 1,
-    //   },
-    // },
+    breakpoints: {
+      100: {
+        slidesPerView: 1,
+      },
+      575: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 1,
+      },
+      992: {
+        slidesPerView: 1.5,
+      },
+      1000: {
+        slidesPerView: 1.5,
+      },
+    },
   });
 
   //廣告輪播
@@ -287,5 +290,13 @@ window.addEventListener('load', () => {
     thumbs: {
       swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
     },
+  });
+
+  // alert
+
+  const alertBtn = document.querySelector('.topAlert .close');
+  const alertContent = document.querySelector('.topAlert');
+  alertBtn.addEventListener('click', () => {
+    alertContent.classList.add('none');
   });
 })();

@@ -108,7 +108,29 @@
   }
 
   @include screen('mobile') {
-    width: 100% !important;
+    width: rem(60) !important;
+    min-height: unset;
+    margin-top: -3.75rem !important;
+    border: 0;
+    min-height: unset;
+    .inputBox {
+      width: 100%;
+      left: 0;
+    }
+    .searchBtn {
+      height: rem(60);
+      width: rem(60);
+      padding: rem(15);
+      &::before {
+        width: 40%;
+        top: rem(16);
+        left: rem(16);
+      }
+    }
+
+    &:hover {
+      border: 0;
+    }
   }
 
   .content {
@@ -180,6 +202,9 @@
       &:focus-visible {
         box-shadow: none;
       }
+      @include screen('mobile') {
+        margin-right: 0.25rem;
+      }
     }
   }
 
@@ -228,8 +253,8 @@
   }
 
   @include screen('mobile') {
-    display: none;
-    width: 100% !important;
+    // display: none;
+    // width: 100% !important;
     left: 0;
     right: 0;
     margin: 0;

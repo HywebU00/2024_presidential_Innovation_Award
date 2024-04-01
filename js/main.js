@@ -490,6 +490,7 @@ function webSearch() {
 
   if (webSearchBtn) {
     webSearchBtn.addEventListener('click', (e) => {
+      console.log('click');
       jsSlideToggle(webSearch);
       jsFadeToggle(menuOverlay);
     });
@@ -1512,7 +1513,7 @@ function shareBtnFunction() {
 }
 shareBtnFunction();
 // -----------------------------------------------------------------------
-// -----  分享按鈕 webSearchBtn dropdwon   ---------------------------------------
+// -----  webSearchBtn dropdwon   ---------------------------------------
 // -----------------------------------------------------------------------
 function searchClickSlideUp() {
   const content = document.querySelector('.webSearch .inputBox');
@@ -1530,7 +1531,7 @@ function webSearchBtnFunction() {
   let content = document.querySelector('.webSearch .inputBox');
   let menuOverlay = document.querySelector('.menuOverlay');
   let windowWidth;
-  el.addEventListener('click', function () {
+  function runEvent() {
     windowWidth = window.innerWidth;
     jsSlideToggle(content);
     if (windowWidth <= 767) {
@@ -1543,6 +1544,17 @@ function webSearchBtnFunction() {
     } else {
       searchClickSlideUp();
     }
+  }
+  el.addEventListener('click', function () {
+    runEvent();
+  });
+  el.addEventListener('keydown', function () {
+    runEvent();
+    let el = document.querySelector('.webSearch');
+    let target = el.querySelectorAll('a, button');
+    [...target][target.length - 1].addEventListener('focusout', function (e) {
+      jsSlideUp(content);
+    });
   });
 }
 webSearchBtnFunction();
@@ -1641,7 +1653,7 @@ gotoCenter();
 // -----------------------------------------------------------------------
 
 function a11yKeyCode() {
-  let search = document.querySelector('.webSearch input[type="text"]');
+  let search = document.querySelector('.webSearch input');
   let header = document.querySelector('.header .accessKey');
   let main = document.querySelector('.main .accessKey');
   let footer = document.querySelector('footer .accessKey');
@@ -1667,10 +1679,13 @@ function a11yKeyCode() {
 
   // click a11 button
   document.addEventListener('keydown', (e) => {
+    let content = document.querySelector('.webSearch .inputBox');
     switch (e.altKey && e.code) {
       // alt+S 查詢
       case true && 'KeyS':
         scrollAnime(0, search);
+
+        jsSlideToggle(content);
         focusElem(0, search);
         break;
       // alt+U header
