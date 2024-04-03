@@ -355,7 +355,9 @@ window.addEventListener('load', () => {
     preloadImages: false, // 多筆設定lazy時須設定
     centeredSlides: false, // 多筆設定lazy時須設定
     slidesPerView: 4,
-    // watchSlidesProgress: true,
+    loop: false,
+    slideThumbActiveClass: 'swiper-slide-thumb-active',
+    watchSlidesProgress: true,
     navigation: {
       nextEl: '.navSlider .nextSlider', //下一張class，無障礙設定關係需要增加.nextSlider
       prevEl: '.navSlider .prevSlider', //前一張class，無障礙設定關係需要增加.prevSlider
@@ -377,8 +379,14 @@ window.addEventListener('load', () => {
   const sliderFor = new Swiper('.sliderFor .swiper', {
     slidesPerView: 1, //顯示張數
     effect: 'fade', //淡入
+    loop: true,
     fadeEffect: {
       crossFade: true, //上一張淡出，false上一張不淡出，下一張疊在上方
+    },
+    navigation: {
+      nextEl: '.sliderFor .nextSlider', //下一張class，無障礙設定關係需要增加.nextSlider
+      prevEl: '.sliderFor .prevSlider', //前一張class，無障礙設定關係需要增加.prevSlider
+      disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
     pagination: {
       el: '.sliderFor .pagination',
@@ -389,7 +397,6 @@ window.addEventListener('load', () => {
       swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
     },
   });
-
   // alert
 
   const alertBtn = document.querySelector('.topAlert .close');
