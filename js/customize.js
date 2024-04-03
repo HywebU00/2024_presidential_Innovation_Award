@@ -1,5 +1,5 @@
 // -----  基本功能開關   ---------------------------------------------------
-// new WOW().init();
+
 window.addEventListener('load', () => {
   topNav(); // 手機版顯示nav選單
   navSticky(); // 捲動時固定主選單
@@ -27,17 +27,17 @@ window.addEventListener('load', () => {
   });
 
   // 手風琴功能
-  accordionFunction({
-    target: '.accordion',
-    openFirst: false, // 預設先展開所有內容，鍵盤的自動開合功能無效
-    autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
-    openSwitch: true, // 是否可開合
-    index: 0, // 預設開啟第幾個
-    info: {
-      open: '展開', // 收合時顯示
-      close: '收合', // 展開時顯示
-    },
-  });
+  //   accordionFunction({
+  //     target: '.accordion',
+  //     openFirst: false, // 預設先展開所有內容，鍵盤的自動開合功能無效
+  //     autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  //     openSwitch: true, // 是否可開合
+  //     index: 0, // 預設開啟第幾個
+  //     info: {
+  //       open: '展開', // 收合時顯示
+  //       close: '收合', // 展開時顯示
+  //     },
+  //   });
 });
 // -----  基本功能開關   ---------------------------------------------------
 
@@ -78,7 +78,12 @@ window.addEventListener('load', () => {
   });
   const mpSlider = new Swiper('.mpSlider .swiper', {
     slidesPerView: 1,
-    loop: false,
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 0,
+    // autoplay: {
+    //   delay: 5000,
+    // },
     // 切換點
     pagination: {
       el: '.mpSlider .swiperDots',
@@ -94,12 +99,72 @@ window.addEventListener('load', () => {
       prevEl: '.mpSlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
+    breakpoints: {
+      100: {
+        slidesPerView: 1,
+      },
+      575: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 1,
+      },
+      1440: {
+        slidesPerView: 1.3,
+      },
+    },
+  });
+
+  //產業大圖輪播
+  let industrySliderItem = document.querySelectorAll('.industrySlider.swiper-slide');
+  let industrySliderPagination = [];
+  industrySliderItem.forEach((item, index) => {
+    industryPagination.push(item.dataset.title);
+  });
+  const industrySlider = new Swiper('.industrySlider .swiper', {
+    slidesPerView: 1,
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 0,
+    // autoplay: {
+    //   delay: 5000,
+    // },
+    // 切換點
+    pagination: {
+      el: '.industrySlider .swiperDots',
+      bulletElement: 'button',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<button class="${className} noFonts" aria-label="${mpSliderPagination[index]}">${mpSliderPagination[index]}</button>`;
+      },
+    },
+    // 切換箭頭
+    navigation: {
+      nextEl: '.industrySlider .nextSlider', //自行設定樣式
+      prevEl: '.industrySlider .prevSlider', //自行設定樣式
+      disabledClass: 'swiperArrow-disabled', //不可點選樣式
+    },
+    breakpoints: {
+      100: {
+        slidesPerView: 1,
+      },
+      575: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 1,
+      },
+      1440: {
+        slidesPerView: 1,
+      },
+    },
   });
 
   //消息輪播
   const newsSwiper = new Swiper('.newsSlider .swiper', {
     slidesPerView: 3,
     spaceBetween: 0,
+
     loop: false,
     // 切換點
     pagination: {
@@ -112,6 +177,39 @@ window.addEventListener('load', () => {
       nextEl: '.newsSlider .nextSlider', //自行設定樣式
       prevEl: '.newsSlider .prevSlider', //自行設定樣式
       disabledClass: '.newsSlider swiperArrow-disabled', //不可點選樣式
+    },
+    breakpoints: {
+      100: {
+        slidesPerView: 1,
+      },
+      575: {
+        slidesPerView: 2,
+      },
+      767: {
+        slidesPerView: 3,
+      },
+      1000: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  //活動輪播
+  const eventSlider = new Swiper('.eventSlider .swiper', {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    loop: false,
+    // 切換點
+    pagination: {
+      el: '.eventSlider .swiperDots',
+      bulletElement: 'button',
+      clickable: true,
+    },
+    // 切換箭頭
+    navigation: {
+      nextEl: '.eventSlider .nextSlider', //自行設定樣式
+      prevEl: '.eventSlider .prevSlider', //自行設定樣式
+      disabledClass: '.eventSlider swiperArrow-disabled', //不可點選樣式
     },
     breakpoints: {
       100: {
@@ -296,7 +394,11 @@ window.addEventListener('load', () => {
 
   const alertBtn = document.querySelector('.topAlert .close');
   const alertContent = document.querySelector('.topAlert');
-  alertBtn.addEventListener('click', () => {
-    alertContent.classList.add('none');
-  });
+
+  function hideAlert() {
+    alertBtn.addEventListener('click', () => {
+      alertContent.classList.add('none');
+    });
+    alertBtn ? hideAlert() : null;
+  }
 })();
