@@ -78,12 +78,10 @@
         border-radius: 0;
         display: block;
         text-align: left;
-        // background-color: #21baff;
         background-color: $colorPrimary;
-        border-radius: 0 1rem 1rem 1rem;
+        border-radius: 0.25em;
         color: #fff;
         text-decoration: none;
-        // padding: 5px 50px 5px 20px;
         padding: 16px 50px 16px 20px;
         position: relative;
       }
@@ -128,5 +126,3 @@
     }
   }
 }
-
-//

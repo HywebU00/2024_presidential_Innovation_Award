@@ -401,11 +401,10 @@ window.addEventListener('load', () => {
 
   const alertBtn = document.querySelector('.topAlert .close');
   const alertContent = document.querySelector('.topAlert');
-
   function hideAlert() {
     alertBtn.addEventListener('click', () => {
       alertContent.classList.add('none');
     });
-    alertBtn ? hideAlert() : null;
   }
+  alertBtn ? hideAlert() : null;
 })();

@@ -1,11 +1,21 @@
 //條件搜尋列ＪＳ
-function conditionaSearcOpen() {
-  conditional_searchbtn.addEventListener('click', function () {
-    jsSlideToggle(conditional_searchblock, 200);
-  });
-}
 const conditional_searchbtn = document.querySelector('.conditional_searchbtn');
 const conditional_searchblock = document.querySelector('.conditional_searchblock');
+function conditionaSearcOpen() {
+  let content = document.querySelector('.conditional_searchblock');
+  conditional_searchbtn.addEventListener('click', function () {
+    jsSlideToggle(content, 200);
+  });
+}
+conditional_searchbtn.addEventListener('keydown', function () {
+  jsSlideToggle(conditional_searchblock, 200);
+  let el = document.querySelector('.conditional_searchblock');
+  let target = el.querySelectorAll('a, button');
+  [...target][target.length - 1].addEventListener('focusout', function (e) {
+    jsSlideUp(conditional_searchblock);
+  });
+});
+
 conditional_searchbtn ? conditionaSearcOpen() : null;
 
 // 手風琴功能

@@ -1752,26 +1752,24 @@ switchA11TitleName();
 // -----------------------------------------------------------------------
 
 function tableAddDataAttributes(obj) {
-  window.addEventListener('load', function () {
-    const el = document.querySelectorAll(obj.elemClass);
-    el.forEach((i) => {
-      const tableItem = i.querySelectorAll('table');
-      tableItem.forEach((i) => {
-        setTrAttr(i);
-      });
-      i.classList.add('loaded');
+  const el = document.querySelectorAll(obj.elemClass);
+  el.forEach((i) => {
+    const tableItem = i.querySelectorAll('table');
+    tableItem.forEach((i) => {
+      setTrAttr(i);
     });
-    function setTrAttr(i) {
-      const thList = i.querySelectorAll('th');
-      const trList = i.querySelectorAll('tr');
-      trList.forEach((trItem) => {
-        const tdList = trItem.querySelectorAll('td');
-        tdList.forEach((i, idx) => {
-          tdList[idx].setAttribute(`data-${obj.dataName}`, `${thList[idx].textContent}`);
-        });
-      });
-    }
+    i.classList.add('loaded');
   });
+  function setTrAttr(i) {
+    const thList = i.querySelectorAll('th');
+    const trList = i.querySelectorAll('tr');
+    trList.forEach((trItem) => {
+      const tdList = trItem.querySelectorAll('td');
+      tdList.forEach((i, idx) => {
+        tdList[idx].setAttribute(`data-${obj.dataName}`, `${thList[idx].textContent}`);
+      });
+    });
+  }
 }
 // tableAddDataAttributes({
 //   elemClass: '.tableList',

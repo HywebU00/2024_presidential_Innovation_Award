@@ -8,10 +8,10 @@
 //   }
 // }
 body {
-  font-size: 1em;
+  font-size: 1.125em; //1em;
   font-weight: normal;
   color: $colorWord;
-  line-height: 1.45em;
+  line-height: 1.45em * 1.125; //1.45em;
   font-family: $fontFamily;
   -webkit-text-size-adjust: none;
   // --變更為全站
