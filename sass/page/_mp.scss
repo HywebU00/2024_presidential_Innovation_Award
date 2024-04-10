@@ -99,6 +99,7 @@
   .container {
     max-width: rem(1280);
     display: flex;
+    align-items: center;
   }
   .banner {
     width: calc(100% - 175px);
