@@ -629,6 +629,18 @@ section {
 
     margin-top: 1.5rem;
   }
+  @media screen and (max-width: 1200px) {
+    .countItem {
+      i {
+        width: rem(70);
+        height: rem(70);
+      }
+    }
+    .num {
+      font-size: 3em;
+    }
+  }
+
   @include screen('tablet') {
     .countItem {
       justify-content: flex-start;
@@ -637,6 +649,7 @@ section {
       text-align: start;
       margin-top: 1rem;
     }
+
     .col {
       margin-bottom: 2rem;
     }
@@ -649,7 +662,7 @@ section {
       text-align: center;
     }
     .num {
-      min-width: 7rem;
+      min-width: 12rem;
       justify-content: flex-start;
     }
     .flexSet {
@@ -898,7 +911,6 @@ section {
   }
   .activitiesSwiper {
     padding-bottom: 7rem;
-
     .swiper-slide {
       .pic {
         height: rem(400);
@@ -1031,8 +1043,122 @@ section {
     }
   }
 }
+
+footer {
+  > .container {
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .navContainer {
+    max-width: rem(1260);
+    margin: 3.5rem auto;
+    padding: 0 1em;
+  }
+  nav {
+    width: 100%;
+    > ul {
+      display: flex;
+      @include screen('tablet') {
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .video {
+    margin-right: 1rem;
+    ul {
+      display: flex;
+      li {
+        display: grid;
+        margin-right: 10px;
+        img {
+          border-radius: 0.25rem;
+        }
+      }
+    }
+  }
+  ul {
+    @include liReset;
+  }
+  .title {
+    color: #000;
+    font-weight: 600;
+    font-size: 1.35em;
+    margin-bottom: 1em;
+    display: block;
+  }
+  .link {
+    margin: 0 3rem 0 1rem;
+    text-align: end;
+    li {
+      margin-bottom: 1rem;
+      a {
+        font-size: 1rem;
+        color: #000;
+      }
+    }
+  }
+  .map {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  @include screen('tablet') {
+    .navContainer {
+      margin-left: 1em;
+      padding: 0;
+    }
+    .link {
+      margin: 0 1rem;
+      width: 100%;
+      text-align: start;
+    }
+    .map {
+      margin: 0 1em;
+    }
+    .video {
+      margin: 0 1em;
+    }
+  }
+  @include screen('mobile') {
+    .link {
+      text-align: start;
+      margin-right: 1rem;
+    }
+    .map {
+      iframe {
+        width: 200px;
+        height: 150px;
+      }
+    }
+  }
+  @include screen('xsMobile') {
+    nav > ul {
+      display: block;
+    }
+    .video {
+      margin: 1rem;
+      ul {
+        display: block;
+        li {
+          margin-left: 0;
+        }
+      }
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
+    }
+    .map {
+      margin: 1rem;
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+}
 .organizerSection {
   background: $colorPrimary;
+  width: 100%;
   display: flex;
   .container {
     width: 100%;
@@ -1077,88 +1203,6 @@ section {
         &:last-child {
           margin-bottom: 0;
         }
-      }
-    }
-  }
-}
-footer {
-  .container {
-    max-width: rem(1260);
-    margin: 3.5rem auto;
-  }
-  nav {
-    width: 100%;
-    > ul {
-      display: flex;
-    }
-  }
-  .video {
-    margin-right: 1rem;
-    ul {
-      display: flex;
-      li {
-        display: grid;
-        margin-right: 10px;
-        img {
-          border-radius: 0.25rem;
-        }
-      }
-    }
-  }
-  ul {
-    @include liReset;
-  }
-  .title {
-    color: #000;
-    font-weight: 600;
-    font-size: 1.35em;
-    margin-bottom: 1em;
-    display: block;
-  }
-  .link {
-    margin: 0 3rem 0 1rem;
-    text-align: end;
-    li {
-      margin-bottom: 1rem;
-      a {
-        font-size: 1rem;
-        color: #000;
-      }
-    }
-  }
-  .map {
-    margin-left: auto;
-    margin-right: 0;
-  }
-  @include screen('tablet') {
-    .link {
-      margin: 0 1rem;
-    }
-  }
-  @include screen('mobile') {
-    .link {
-      text-align: start;
-      margin-right: 1rem;
-    }
-
-    .map {
-      iframe {
-        width: 200px;
-        height: 150px;
-      }
-    }
-  }
-  @include screen('xsMobile') {
-    nav > ul {
-      display: block;
-    }
-    .video {
-      margin: 1rem;
-    }
-    .map {
-      margin: 1rem;
-      iframe {
-        width: 100%;
       }
     }
   }
