@@ -116,10 +116,10 @@ window.addEventListener('load', () => {
   });
 
   //產業大圖輪播
-  let industrySliderItem = document.querySelectorAll('.industrySlider.swiper-slide');
+  let industrySliderItem = document.querySelectorAll('.industrySlider .swiper-slide');
   let industrySliderPagination = [];
   industrySliderItem.forEach((item, index) => {
-    industryPagination.push(item.dataset.title);
+    industrySliderPagination.push(item.dataset.title);
   });
   const industrySlider = new Swiper('.industrySlider .swiper', {
     slidesPerView: 1,
@@ -135,7 +135,7 @@ window.addEventListener('load', () => {
       bulletElement: 'button',
       clickable: true,
       renderBullet: function (index, className) {
-        return `<button class="${className} noFonts" aria-label="${mpSliderPagination[index]}">${mpSliderPagination[index]}</button>`;
+        return `<button class="${className} " aria-label="${industrySliderPagination[index]}">0${[index + 1]}</button>`;
       },
     },
     // 切換箭頭
@@ -257,6 +257,38 @@ window.addEventListener('load', () => {
       // 575: {
       //   slidesPerView: 2,
       // },
+      767: {
+        slidesPerView: 1.5,
+      },
+      1000: {
+        slidesPerView: 3,
+      },
+    },
+  });
+  //廣告輪播
+  const recommendSwiper = new Swiper('.recommendSlider .swiper', {
+    slidesPerView: 1.5,
+    // spaceBetween: 20,
+    loop: true,
+    centeredSlides: true,
+    // 切換點
+    pagination: {
+      el: '.recommendSlider .swiperDots',
+      bulletElement: 'button',
+      clickable: true,
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      dragSize: 120,
+    },
+    // 切換箭頭
+    navigation: {
+      nextEl: '.recommendSlider .nextSlider', //自行設定樣式
+      prevEl: '.recommendSlider .prevSlider', //自行設定樣式
+      disabledClass: '.recommendSlider swiperArrow-disabled', //不可點選樣式
+    },
+    breakpoints: {
       767: {
         slidesPerView: 1.5,
       },
