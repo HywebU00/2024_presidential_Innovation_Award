@@ -672,6 +672,9 @@ section {
     @include screen('tablet') {
       li {
         flex: 0 1 20%;
+        font-size: 1em;
+        padding: 0 0.25rem;
+        line-height: 1.5em;
       }
     }
   }
@@ -755,6 +758,14 @@ section {
   }
   .swiperBox {
     margin-bottom: 10em;
+  }
+  @include screen('tablet') {
+    .container {
+      padding: 0;
+    }
+    .sliderTag {
+      left: rem(15);
+    }
   }
 }
 .winnerSlider {
@@ -878,6 +889,23 @@ section {
   .swiper-scrollbar-drag {
     background-color: $colorPrimary !important;
   }
+  @include screen('tablet') {
+    .swiper-slide {
+      .title {
+        font-size: 1.5em;
+      }
+    }
+  }
+  @include screen('mobile') {
+    .swiper-slide {
+      .sticker {
+        line-height: 1.5em;
+        span {
+          font-size: 1.15em;
+        }
+      }
+    }
+  }
 }
 .activitiesSection {
   background: url(../images/activitie_bg.jpg) no-repeat;
@@ -888,6 +916,7 @@ section {
   }
   .activitiesSwiper {
     padding-bottom: 7rem;
+
     .swiper-slide {
       .pic {
         height: rem(400);
@@ -1004,7 +1033,8 @@ section {
           right: 2%;
           width: rem(90);
           height: rem(90);
-          font-size: 1.15em;
+          font-size: 1em;
+          line-height: 1.25em;
         }
       }
     }
@@ -1018,6 +1048,13 @@ section {
     .container {
       padding: 0 15px 0 15px;
     }
+    .activitiesSwiper {
+      .swiper-slide {
+        .title {
+          font-size: 1.25em;
+        }
+      }
+    }
   }
 }
 
@@ -1028,10 +1065,8 @@ footer {
     padding: 0;
   }
   .navContainer {
-    // max-width: rem(1260);
     display: flex;
     justify-content: center;
-    // margin: 3.5rem auto;
     padding: 4em 1em;
     width: 100%;
   }
