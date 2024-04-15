@@ -312,18 +312,17 @@ h2.title {
   a {
     display: block;
     height: 100%;
-    // width: inherit;
   }
   .swiperArrow {
     padding: 10px;
   }
   .imgContainer {
-    border-radius: 1rem;
+    border-radius: 0.25em;
     overflow: hidden;
     display: flex !important;
     justify-content: center;
     align-items: center;
-    height: rem(580);
+    height: rem(480);
     img {
       min-height: 100%;
       max-height: 100%;
@@ -337,9 +336,9 @@ h2.title {
   }
 }
 .navSlider {
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
-  border-radius: 0.5rem;
+  border-radius: 0.2em;
   overflow: hidden;
   .imgContainer {
     position: relative;
@@ -370,4 +369,7 @@ h2.title {
       opacity: 0;
     }
   }
+}
+.swiper-pagination-bullet-active {
+  background: $aHover !important;
 }

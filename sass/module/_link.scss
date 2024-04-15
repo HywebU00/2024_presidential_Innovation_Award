@@ -12,6 +12,8 @@
     margin: 0;
     padding: 1em 0;
     list-style-type: none;
+    position: relative;
+    counter-reset: my-counter;
   }
   li {
     flex: 1 1 48%;
@@ -34,14 +36,27 @@
     }
     a {
       border: 1px solid #ddd;
-      padding: 1em 2em 1em 2em;
+      padding: 1em 2em 1em 3em;
       display: block;
       vertical-align: top;
       position: relative;
       height: 100%;
       box-sizing: border-box;
       @include aSetting($colorWord);
+      &::after {
+        counter-increment: my-counter;
+        content: counter(my-counter) '';
+        position: absolute;
+        z-index: -1;
+        left: 5px;
+        font-size: 2.6em;
+        font-weight: bolder;
+        font-style: italic;
+        color: rgba(173, 181, 189, 0.4);
+      }
+
       // @include textOverflow;
+
       .num {
         position: absolute;
         width: 1em;
@@ -52,10 +67,12 @@
           content: '.';
         }
       }
+
       &:hover,
       &:focus-visible {
         border: 1px solid $aHover;
-        color: $aHover;
+        background-color: rgb(81 194 187 / 10%);
+        color: black;
       }
     }
   }

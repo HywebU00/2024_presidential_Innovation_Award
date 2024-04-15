@@ -348,3 +348,13 @@
     }
   }
 }
+.submenu {
+  li {
+    a {
+      &:hover,
+      &:focus-visible {
+        background-color: rgb(104, 77, 49, 0.1);
+      }
+    }
+  }
+}
