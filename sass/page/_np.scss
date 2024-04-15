@@ -2,9 +2,8 @@
   .nodeMenu {
     padding: 0;
   }
-
   .title {
-    border-radius: 0.5rem 0.5rem 0 0;
+    border-radius: 0.25rem 0.25rem 0 0;
     font-weight: 400;
 
     background: $colorPrimary;
@@ -16,10 +15,8 @@
       ul {
         padding: 0;
         li {
-          // border-color: $colorGray;
           font-weight: bold;
           color: $colorWord;
-
           margin: 0;
           padding: 0;
           .accordionList {
@@ -50,31 +47,15 @@
             border-radius: 0rem;
             &:hover,
             &:focus {
-              background: darken($colorGray, 18%);
+              background: darken($colorGray, 10%);
             }
           }
 
           &.active {
             > button {
-              background: darken($colorGray, 18%);
-              // background: lighten($colorSecondary, 25%);
+              background: darken($colorGray, 10%);
             }
           }
-          // ul {
-          //   li {
-          //     button {
-          //       &:hover,
-          //       &:focus {
-          //         background: $colorInfo;
-          //       }
-          //     }
-          //   }
-          //   li.active {
-          //     button {
-          //       background: $colorInfo;
-          //     }
-          //   }
-          // }
         }
       }
       .active .accordionArrow {
@@ -113,7 +94,6 @@
             }
           }
           a {
-            // padding-left: 1.75rem;
             padding-left: 2.5rem;
           }
           .active {
@@ -124,5 +104,11 @@
         }
       }
     }
+  }
+}
+
+.np {
+  .submenu {
+    margin-bottom: rem(60);
   }
 }

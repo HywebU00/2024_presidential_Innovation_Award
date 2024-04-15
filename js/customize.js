@@ -81,9 +81,9 @@ window.addEventListener('load', () => {
     loop: true,
     centeredSlides: true,
     spaceBetween: 0,
-    // autoplay: {
-    //   delay: 5000,
-    // },
+    autoplay: {
+      delay: 5000,
+    },
     // 切換點
     pagination: {
       el: '.mpSlider .swiperDots',
@@ -109,8 +109,8 @@ window.addEventListener('load', () => {
       767: {
         slidesPerView: 1,
       },
-      1440: {
-        slidesPerView: 1.3,
+      1600: {
+        slidesPerView: 1.2,
       },
     },
   });
@@ -126,9 +126,9 @@ window.addEventListener('load', () => {
     loop: true,
     centeredSlides: true,
     spaceBetween: 0,
-    // autoplay: {
-    //   delay: 5000,
-    // },
+    autoplay: {
+      delay: 5000,
+    },
     // 切換點
     pagination: {
       el: '.industrySlider .swiperDots',

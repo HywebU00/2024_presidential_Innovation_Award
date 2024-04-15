@@ -1,11 +1,14 @@
 .conditional_searchbtn {
   border-radius: 0.25rem;
+  // margin-top: -4.3em;
   font-size: 1em;
   background-image: url('../images/icon/icon_search.svg');
   background-position: 20px 12px;
   background-repeat: no-repeat;
   background-size: 16px;
   padding-left: 46px;
+  color: #fff;
+  background-color: $colorPrimary;
   &:hover {
     background-image: url('../images/icon/icon_search.svg');
     background-position: 20px 12px;
@@ -14,8 +17,8 @@
   }
 }
 .conditional_searchblock {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
   margin-top: 0.5rem;
-
   padding: 1rem;
   border-radius: 0.5rem;
   display: none;

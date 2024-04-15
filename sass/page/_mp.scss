@@ -9,7 +9,7 @@
   }
   .item {
     img {
-      max-height: rem(642);
+      max-height: rem(720);
       object-fit: cover;
       @include screen('tablet') {
         max-height: unset;
@@ -564,6 +564,11 @@ section {
       }
     }
   }
+  @include screen('tablet') {
+    .txt {
+      margin-bottom: 3.5em;
+    }
+  }
 }
 .numSection {
   background: url(../images/num_bg.jpg) no-repeat;
@@ -571,6 +576,7 @@ section {
   min-height: rem(368);
   display: flex;
   align-items: center;
+
   .container {
     width: 100%;
   }
@@ -597,6 +603,25 @@ section {
     margin-left: 0.5rem;
     font-family: 'DM Serif Display';
     font-size: 3.5em;
+  }
+  .item {
+    position: relative;
+    // margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 38px;
+      height: 4px;
+      background: #fff;
+      bottom: 0;
+      left: calc(50% - 16px);
+    }
+    @include screen('tablet') {
+      &::after {
+        display: none;
+      }
+    }
   }
   .txt {
     text-align: center;
@@ -708,6 +733,7 @@ section {
     position: absolute;
     top: 200px;
     display: flex;
+    font-family: 'DM Serif Display';
   }
   .date {
     background: $colorPrimary;
@@ -720,10 +746,12 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-size: 1.25em;
+    line-height: 1.25em;
     .year {
       display: block;
       text-align: center;
+      font-size: 0.9em;
     }
   }
   .title {
@@ -752,6 +780,8 @@ section {
     justify-content: center;
     align-items: center;
     color: #fff;
+    letter-spacing: 0.1rem;
+    font-size: 1.25em;
   }
   a {
     color: #000;
@@ -804,10 +834,10 @@ section {
       }
     }
     .title {
-      font-size: 2em;
+      font-size: 1.75em;
       font-weight: 400;
       color: #909090;
-      line-height: 1.25em;
+      line-height: 0.75em;
       margin-bottom: 0.75rem;
     }
     .subtitle {
@@ -825,11 +855,12 @@ section {
       color: #fff;
       justify-content: center;
       align-items: center;
-      line-height: 2em;
+      line-height: 1.5em;
       text-align: center;
+      font-size: 1.25em;
       span {
         display: block;
-        font-size: 1.75em;
+        font-size: 1.25em;
       }
       @include screen('tablet') {
         height: rem(140);
@@ -1003,8 +1034,12 @@ section {
         justify-content: center;
         align-items: center;
         background: unset;
-        font-size: 1.2em;
-        font-weight: 600;
+        font-size: 1em;
+        font-weight: 500;
+        transition: all 0.5s;
+        &:hover {
+          border-color: $colorPrimary;
+        }
       }
       .info {
         display: flex;
