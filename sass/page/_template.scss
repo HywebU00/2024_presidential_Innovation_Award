@@ -96,3 +96,16 @@ body {
 .hidden {
   display: none;
 }
+.mainMenu {
+  > ul {
+    > li {
+      flex: 0 1 12%;
+      @include screen('tablet') {
+        flex: 0 1 14.28%;
+        a {
+          padding: 0 0.5em;
+        }
+      }
+    }
+  }
+}
