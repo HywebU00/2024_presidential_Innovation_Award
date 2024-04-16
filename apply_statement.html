@@ -8,10 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>總統創新獎</title>
-  <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-  <![endif]-->
+
   <!-- style css -->
   <link rel="stylesheet" href="css/style.css" />
   <!-- favicon -->
@@ -22,7 +19,7 @@
   <!-- 直接跳主內容區 -->
   <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
   <!-- wrapper Start -->
-  <div class="wrapper">
+  <div class="wrapper ">
     <!-- header Start -->
     <header>
       <!-- alert start -->
@@ -35,7 +32,7 @@
           </div> -->
       <!-- alert end -->
       <div class="header typeB"">
-                  <div class=" container">
+        <div class=" container">
         <a class="accessKey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
         <h1>
           <div class="logo">
@@ -249,10 +246,9 @@
     <!-- 內頁新增一個classname-->
     <a class="accessKey" href="#aC" id="ac" accesskey="C" title="主要內容區">:::</a>
     <div class="container">
-      <!-- 左側 -->
+
       <!-- 主要內容區 -->
       <div class="centerBlock">
-        <!-- breadcrumb路徑 -->
         <nav aria-label="Breadcrumb" class="breadcrumb">
           <ul>
             <li><a href="#">首頁</a></li>
@@ -261,45 +257,69 @@
           </ul>
         </nav>
         <!-- h2節點 -->
-        <h2 class="title">查詢結果</h2>
-
-        <!-- SP Start -->
-        <section class="sp">
-          <div id="gsresult">
-            <script>
-              function gcseCallback() {
-                //if (document.readyState != 'complete')
-                //    return google.setOnLoadCallback(gcseCallback, true);
-                google.search.cse.element.render({
-                  gname: 'gsearch',
-                  div: 'gsresult',
-                  tag: 'search',
-                  attributes: { as_sitesearch: '' },
-                });
-                var element = google.search.cse.element.getElement('gsearch');
-                element.execute('法官');
-              }
-              window.__gcse = {
-                parsetags: 'explicit',
-                callback: gcseCallback,
-              };
-              (function () {
-                var cx = 'bbfb6b718fa6fa6f6';
-                var gcse = document.createElement('script');
-                gcse.type = 'text/javascript';
-                gcse.async = true;
-                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(gcse, s);
-              })();
-            </script>
+        <h2 class="title">113年度3月份計畫管理及會計作業說明會</h2>
+        <!-- APPLY Start -->
+        <ol class="progress">
+          <li class="complete" data-step="1">
+            個資聲明
+          </li>
+          <li class="active" data-step="2">
+            Email驗證
+          </li>
+          <li data-step="3" class="progress__last">
+            報名資料
+          </li>
+          <li data-step="4" class="progress__last">
+            預覽確認
+          </li>
+          <li data-step="5" class="progress__last">
+            完成報名
+          </li>
+        </ol>
+        <section class="apply">
+          <div class="flexForm formGrid">
+            <div class="formGrp formStatement">
+              <h3>經濟部 蒐集個人資料告知事項暨個人資料提供同意書</h3>
+              <p>經濟部為遵守個人資料保護法令及經濟部個人資料保護政策、規章，委託計畫執行單位-台北市電腦商業同業公會於向您蒐集個人資料前，依法向您告知下列事項，敬請詳閱。</p>
+              <ul>
+                <li>蒐集目的及類別： 經濟部因辦理或執行「科研成果價值創造計畫」之業務、活動、計畫、提供服務及供經濟部用於內部行政管理、陳報主管機關或其他合於經濟部組織規章所定業務、寄送經濟部或產業相關活動訊息之蒐集目的，而需獲取您下列個人資料類別：姓名、聯絡方式(如電話號碼、職稱、電子信箱、居住或工作地址等)、身分證統一編號，或其他得以直接或間接識別您個人之資料。</li>
+                <li>個人資料利用之期間、地區、對象及方式： 除涉及國際業務或活動外，您的個人資料僅供經濟部於中華民國領域、在前述蒐集目的之必要範圍內，以合理方式利用至蒐集目的消失為止。</li>
+                <li>
+                  當事人權利行使： 您可依前述業務、活動所定規則或依經濟部產業技術司 計畫網站所載聯絡電話 向經濟部行使下列權利：
+                  <ul>
+                    <li>查詢或請求閱覽。</li>
+                    <li>請求製給複製本。</li>
+                    <li>請求補充或更正。</li>
+                    <li>請求停止蒐集、處理及利用。</li>
+                    <li>請求刪除您的個人資料。</li>
+                  </ul>
+                </li>
+                <li>不提供個人資料之權益影響： 若您未提供正確或不提供個人資料，經濟部將無法為您提供蒐集目的之相關服務。</li>
+                <li>您瞭解此一同意書符合個人資料保護法及相關法規之要求，且同意經濟部留存此同意書，供日後取出查驗。</li>
+              </ul>
+              <h3>個人資料之同意提供：</h3>
+              <ul>
+                <li>本人已充分獲知且已瞭解上述經濟部告知事項。</li>
+                <li>本人同意經濟部及計畫執行單位於所列蒐集目的之必要範圍內，蒐集、處理及利用本人之個人資料。</li>
+              </ul>
+            </div>
+            <div class="formGrp agree">
+              <div class="formTitle"></div>
+              <div class="formContent formInline">
+                <div class="checkGrp">
+                  <label><input name="checkSample" type="checkbox" value="" title="請勾選確認詳讀以上表單內容" />我已經詳讀以上表單內容</label>
+                </div>
+              </div>
+            </div>
+            <div class="btnGrp formInline">
+              <button type="button" class="btn btnSubmit">下一步</button>
+            </div>
           </div>
         </section>
-        <!-- sP End -->
+        <!-- APPLY End -->
       </div>
     </div>
   </main>
-
   <!-- footer Start-->
   <footer>
     <div class="container">
@@ -410,8 +430,9 @@
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
   <!-- main js-->
   <script src="js/main.js"></script>
-  <!-- js -->
+  <!-- 客製js -->
   <script src="js/customize.js"></script>
+  <script src="js/lp.js"></script>
 </body>
 
 </html>

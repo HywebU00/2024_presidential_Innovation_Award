@@ -8,10 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>總統創新獎</title>
-  <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-  <![endif]-->
+
   <!-- style css -->
   <link rel="stylesheet" href="css/style.css" />
   <!-- favicon -->
@@ -22,7 +19,7 @@
   <!-- 直接跳主內容區 -->
   <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
   <!-- wrapper Start -->
-  <div class="wrapper">
+  <div class="wrapper ">
     <!-- header Start -->
     <header>
       <!-- alert start -->
@@ -35,7 +32,7 @@
           </div> -->
       <!-- alert end -->
       <div class="header typeB"">
-                  <div class=" container">
+        <div class=" container">
         <a class="accessKey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
         <h1>
           <div class="logo">
@@ -249,10 +246,9 @@
     <!-- 內頁新增一個classname-->
     <a class="accessKey" href="#aC" id="ac" accesskey="C" title="主要內容區">:::</a>
     <div class="container">
-      <!-- 左側 -->
+
       <!-- 主要內容區 -->
       <div class="centerBlock">
-        <!-- breadcrumb路徑 -->
         <nav aria-label="Breadcrumb" class="breadcrumb">
           <ul>
             <li><a href="#">首頁</a></li>
@@ -261,45 +257,102 @@
           </ul>
         </nav>
         <!-- h2節點 -->
-        <h2 class="title">查詢結果</h2>
+        <h2 class="title">113年度3月份計畫管理及會計作業說明會</h2>
+        <!-- APPLY Start -->
+        <section class="apply">
+          <div>註： <span>*</span> 欄位，不能為空白。</div>
+          <div class="flexForm formGrid">
+            <div class="formGrp">
+              <!-- 使用aria-required屬性指出必填的表單欄位 -->
+              <label for="username" class="formTitle" aria-required="true">公司名稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent">
+                <input type="text" id="username" title="請輸入帳號" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="" class="formTitle" aria-required="true">統一編號</label>
+              <div class="formContent">
+                <input name="" id="" type="text" title="" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="" class="formTitle" aria-required="true">資本額(萬元)
+              </label>
+              <div class="formContent">
+                <input name="" id="" type="text" title="" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="" class="formTitle" aria-required="true">營業額(萬元)</label>
+              <div class="formContent">
+                <input name="" id="" type="text" title="" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="" class="formTitle" aria-required="true">員工人數</label>
+              <div class="formContent">
+                <input name="" id="" type="text" title="" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <div class="formTitle">公司地址</div>
+              <div class="formContent formCol_2_10">
+                <select name="" id="">
+                  <option value="">台北市</option>
+                  <option value="">新北市</option>
+                  <option value="">桃園市</option>
+                  <option value="">新竹市</option>
+                  <option value="">...</option>
+                </select>
 
-        <!-- SP Start -->
-        <section class="sp">
-          <div id="gsresult">
-            <script>
-              function gcseCallback() {
-                //if (document.readyState != 'complete')
-                //    return google.setOnLoadCallback(gcseCallback, true);
-                google.search.cse.element.render({
-                  gname: 'gsearch',
-                  div: 'gsresult',
-                  tag: 'search',
-                  attributes: { as_sitesearch: '' },
-                });
-                var element = google.search.cse.element.getElement('gsearch');
-                element.execute('法官');
-              }
-              window.__gcse = {
-                parsetags: 'explicit',
-                callback: gcseCallback,
-              };
-              (function () {
-                var cx = 'bbfb6b718fa6fa6f6';
-                var gcse = document.createElement('script');
-                gcse.type = 'text/javascript';
-                gcse.async = true;
-                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(gcse, s);
-              })();
-            </script>
+                <input name="username" type="text" title="請輸入" />
+              </div>
+            </div>
+            <div class="formGrp" role="group" aria-labelledby="fake-legend">
+              <div for="" class="formTitle">企業規模</div>
+              <div class="formContent" id="fake-legend">
+                <div class="radioGrp formInline">
+                  <label> <input type="radio" name="sampleRadio6" value="" checked="" />中小企業</label>
+                  <label> <input type="radio" name="sampleRadio6" title="" value="" />大型企業</label>
+                  <label> <input type="radio" name="sampleRadio6" title="" value="" />法人</label>
+                  <label> <input type="radio" name="sampleRadio6" title="" value="" />其他</label>
+                </div>
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="" class="formTitle" aria-required="true">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent">
+                <input name="" id="" type="text" title="" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="" class="formTitle" aria-required="true">部門/職稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent">
+                <input name="" id="" type="text" title="" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="email" class="formTitle" aria-required="true">E-mail<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent">
+                <input name="email" type="email" id="email" title="請輸入E-mail" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="phone" class="formTitle" aria-required="true">聯絡電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent">
+                <input name="phone" id="phone" type="tel" title="請輸入電話" />
+              </div>
+            </div>
+            <div class="btnGrp formInline">
+              <button type="button" class="btn btnReset">清除重填</button>
+              <button type="button" class="btn btnSubmit">下一步</button>
+            </div>
           </div>
         </section>
-        <!-- sP End -->
+        <!-- APPLY End -->
       </div>
     </div>
   </main>
-
   <!-- footer Start-->
   <footer>
     <div class="container">
@@ -410,8 +463,9 @@
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
   <!-- main js-->
   <script src="js/main.js"></script>
-  <!-- js -->
+  <!-- 客製js -->
   <script src="js/customize.js"></script>
+  <script src="js/lp.js"></script>
 </body>
 
 </html>
