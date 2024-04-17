@@ -60,7 +60,6 @@
                     <li><a href="#">ENGLISH</a></li>
                   </ul>
                 </div>
-
               </div>
             </nav>
             <!-- navigation End -->
@@ -105,6 +104,7 @@
                 </ul>
               </li>
               <li><a href="http://www.google.com">最新消息</a></li>
+
               <li>
                 <a href="#">參選資訊</a>
                 <ul>
@@ -264,105 +264,99 @@
           <li class="complete" data-step="2">
             Email驗證
           </li>
-          <li class="active " data-step="3">
+          <li class="complete" data-step="3">
             報名資料
           </li>
           <!-- progress__last -->
-          <li data-step="4">
+          <li class="active" data-step="4">
             預覽確認
           </li>
-          <li data-step="5">
+          <li class="" data-step="5">
             完成報名
           </li>
         </ol>
         <!-- APPLY Start -->
         <section class="apply">
-          <div>註：<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr> 欄位，不能為空白。</div>
+          <div>註： <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr> 欄位，不能為空白。</div>
           <div class="flexForm formGrid">
-            <div class="formGrp">
-              <!-- 使用aria-required屬性指出必填的表單欄位 -->
-              <label for="username" class="formTitle" aria-required="true">公司名稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-              <div class="formContent">
-                <input type="text" id="username" title="請輸入帳號" />
-              </div>
-            </div>
-            <div class="formGrp">
-              <label for="" class="formTitle" aria-required="true">統一編號</label>
-              <div class="formContent">
-                <input name="" id="" type="text" title="" />
-              </div>
-            </div>
-            <div class="formGrp">
-              <label for="" class="formTitle" aria-required="true">資本額(萬元)
-              </label>
-              <div class="formContent">
-                <input name="" id="" type="text" title="" />
-              </div>
-            </div>
-            <div class="formGrp">
-              <label for="" class="formTitle" aria-required="true">營業額(萬元)</label>
-              <div class="formContent">
-                <input name="" id="" type="text" title="" />
-              </div>
-            </div>
-            <div class="formGrp">
-              <label for="" class="formTitle" aria-required="true">員工人數</label>
-              <div class="formContent">
-                <input name="" id="" type="text" title="" />
-              </div>
-            </div>
-            <div class="formGrp">
-              <div class="formTitle">公司地址</div>
-              <div class="formContent formCol_2_10">
-                <select name="" id="">
-                  <option value="">台北市</option>
-                  <option value="">新北市</option>
-                  <option value="">桃園市</option>
-                  <option value="">新竹市</option>
-                  <option value="">...</option>
-                </select>
+            <div class="tableWrapper">
+              <table>
+                <!-- 無障礙 caption 標題預設隱藏 -->
+                <caption>
+                  無障礙表格標題
+                </caption>
+                <tbody>
+                  <tr>
+                    <th scope="row">公司名稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></th>
+                    <td>橘子科技</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">統一編號
+                    </th>
+                    <td>
 
-                <input name="username" type="text" title="請輸入" />
-              </div>
-            </div>
-            <div class="formGrp" role="group" aria-labelledby="fake-legend">
-              <div for="" class="formTitle">企業規模</div>
-              <div class="formContent" id="fake-legend">
-                <div class="radioGrp formInline">
-                  <label> <input type="radio" name="sampleRadio6" value="" checked="" />中小企業</label>
-                  <label> <input type="radio" name="sampleRadio6" title="" value="" />大型企業</label>
-                  <label> <input type="radio" name="sampleRadio6" title="" value="" />法人</label>
-                  <label> <input type="radio" name="sampleRadio6" title="" value="" />其他</label>
-                </div>
-              </div>
-            </div>
-            <div class="formGrp">
-              <label for="" class="formTitle" aria-required="true">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-              <div class="formContent">
-                <input name="" id="" type="text" title="" />
-              </div>
-            </div>
-            <div class="formGrp">
-              <label for="" class="formTitle" aria-required="true">部門/職稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-              <div class="formContent">
-                <input name="" id="" type="text" title="" />
-              </div>
-            </div>
-            <div class="formGrp">
-              <label for="email" class="formTitle" aria-required="true">E-mail<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-              <div class="formContent">
-                <input name="email" type="email" id="email" title="請輸入E-mail" />
-              </div>
-            </div>
-            <div class="formGrp">
-              <label for="phone" class="formTitle" aria-required="true">聯絡電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-              <div class="formContent">
-                <input name="phone" id="phone" type="tel" title="請輸入電話" />
-              </div>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">資本額(萬元)
+                    </th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">營業額(萬元)
+                    </th>
+                    <td>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">員工人數
+                    </th>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">公司地址<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                    </th>
+                    <td>
+                      台北市中正區重慶南路二段1000號
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"> 企業規模<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                    </th>
+                    <td>
+                      大型企業
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"> 姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                    </th>
+                    <td>
+                      劉志祥
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"> 部門/職稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                    </th>
+                    <td>
+                      qqq123@gmail.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">聯絡電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                    </th>
+                    <td>
+                      0222212345
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <div class="btnGrp formInline">
-              <button type="button" class="btn btnReset">清除重填</button>
-              <button type="button" class="btn btnSubmit">下一步</button>
+              <button type="button" class="btn btnReset">修改報名資料</button>
+              <button type="button" class="btn btnSubmit">確認送出</button>
             </div>
           </div>
         </section>
