@@ -84,6 +84,12 @@
   border-radius: 0.25em;
   p {
     margin-bottom: 0;
+    span {
+      color: red;
+    }
+  }
+  .title {
+    font-weight: bold;
   }
   .event {
     list-style: none;
