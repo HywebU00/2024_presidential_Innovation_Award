@@ -79,6 +79,7 @@
   .cardList {
     p {
       margin-top: 0.75em;
+      @include textLine(3, 23px);
     }
     a {
       .name,
@@ -86,6 +87,7 @@
       time {
         font-size: 0.8em;
         line-height: 1.25em;
+        @include textLine(1, 23px);
       }
     }
     .thumbnail {
