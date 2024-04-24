@@ -7,26 +7,27 @@
     flex-wrap: wrap;
 
     li {
-      margin: 0px 3px 3px 0px;
+      margin: 0px 8px 8px 0px;
       display: block;
     }
   }
   a {
-    border: 1px solid #aaa;
+    border: 1px solid $colorPrimary;
     padding: 0.25em 0.75em;
+    border-radius: 0.25rem;
     display: block;
     color: #333;
-    font-size: 0.875rem;
+    font-size: 1em;
     box-sizing: border-box;
-    &:before {
-      content: '#';
-      margin-right: 0.25em;
-    }
+    background: mix($colorPrimary, #fff, 10%);
+    // &:before {
+    //   content: '#';
+    //   margin-right: 0.25em;
+    // }
     &:hover,
     &:focus,
     &.active {
-      color: #fff;
-      background: lighten($colorPrimary, 5);
+      background: mix($colorPrimary, #fff, 30%);
       border: 1px solid lighten($colorPrimary, 5);
       box-shadow: none;
     }

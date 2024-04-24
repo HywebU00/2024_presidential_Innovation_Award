@@ -1139,7 +1139,7 @@ footer {
     display: block;
   }
   .link {
-    margin: 0 3rem 0 1rem;
+    margin: 0 5rem 0 1rem;
 
     li {
       margin-bottom: 1rem;
@@ -1151,7 +1151,12 @@ footer {
   }
   .map {
     margin-left: auto;
-    margin-right: 0;
+    margin-right: 2rem;
+  }
+  @media screen and (max-width: 1280px) {
+    .link {
+      margin: 0 2rem 0 1rem;
+    }
   }
   @include screen('tablet') {
     .navContainer {
