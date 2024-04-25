@@ -85,6 +85,12 @@
       }
     }
   }
+  .swiper-slide-next,
+  .swiper-slide-prev {
+    &::before {
+      display: none;
+    }
+  }
 
   @include screen('tablet') {
     .banner {
