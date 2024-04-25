@@ -80,6 +80,12 @@
     .flexSet {
       justify-content: flex-start;
     }
+    .title + p {
+      margin-top: 3.75em;
+      @include screen('mobile') {
+        margin-top: 2.75em;
+      }
+    }
     p {
       margin-top: 0.75em;
       @include textLine(2, 25px);
@@ -121,7 +127,7 @@
           bottom: 40%;
         }
         @include screen('xsMobile') {
-          bottom: 35%;
+          bottom: 30%;
           width: rem(100);
           height: rem(100);
         }
@@ -141,13 +147,6 @@
             }
           }
         }
-      }
-    }
-    .caption {
-      margin-top: 4em;
-      border-bottom: 3px #000 solid;
-      @include screen('mobile') {
-        margin-top: 3.3em;
       }
     }
   }
@@ -196,8 +195,15 @@
     }
   }
   .thumbnail {
-    .caption {
-      border-bottom: 3px #000 solid;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 6%);
+      left: 3%;
+      height: 3px;
+      background: black;
+      bottom: 0;
     }
     flex-basis: calc(100% / 4 - 12px);
     max-width: calc(100% / 4 - 12px);
