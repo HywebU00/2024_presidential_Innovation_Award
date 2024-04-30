@@ -79,18 +79,20 @@
       background: url(../vendor/swiper/ar.png) no-repeat;
     }
   }
-  .swiper-slide-next,
-  .swiper-slide-prev {
-    &::before {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 100%;
-      opacity: 0.6;
-      background-color: #000;
-      top: 0;
-    }
-  }
+  // .swiper-slide-next,
+  // .swiper-slide-prev {
+  //   &:not(.swiper-slide-active) {
+  //     &::before {
+  //       position: absolute;
+  //       content: '';
+  //       width: 100%;
+  //       height: 100%;
+  //       opacity: 0.6;
+  //       background-color: #000;
+  //       top: 0;
+  //     }
+  //   }
+  // }
 }
 
 section {

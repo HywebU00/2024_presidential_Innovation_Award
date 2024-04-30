@@ -1,7 +1,7 @@
 // -----  基本功能開關   ---------------------------------------------------
 
 window.addEventListener('load', () => {
-  topNav(); // 手機版顯示nav選單
+  // topNav(); // 手機版顯示nav選單
   navSticky(); // 捲動時固定主選單
   xSlider('.language button', '.language ul'); //語系
   // fontSize(); // 全站字體
@@ -231,7 +231,7 @@ window.addEventListener('load', () => {
   const winnerSwiper = new Swiper('.winnerSlider .swiper', {
     slidesPerView: 1.5,
     // spaceBetween: 20,
-    loop: true,
+    // loop: true,
     centeredSlides: true,
     // 切換點
     pagination: {
@@ -265,11 +265,11 @@ window.addEventListener('load', () => {
       },
     },
   });
-  //廣告輪播
+  //推薦閱讀
   const recommendSwiper = new Swiper('.recommendSlider .swiper', {
     slidesPerView: 1.5,
     // spaceBetween: 20,
-    loop: true,
+    // loop: true,
     centeredSlides: true,
     // 切換點
     pagination: {
