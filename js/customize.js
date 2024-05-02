@@ -164,7 +164,6 @@ window.addEventListener('load', () => {
   const newsSwiper = new Swiper('.newsSlider .swiper', {
     slidesPerView: 3,
     spaceBetween: 0,
-
     loop: false,
     // 切換點
     pagination: {
@@ -230,7 +229,6 @@ window.addEventListener('load', () => {
   //廣告輪播
   const winnerSwiper = new Swiper('.winnerSlider .swiper', {
     slidesPerView: 1.5,
-    // spaceBetween: 20,
     loop: true,
     centeredSlides: true,
     // 切換點
@@ -251,12 +249,6 @@ window.addEventListener('load', () => {
       disabledClass: '.winnerSlider swiperArrow-disabled', //不可點選樣式
     },
     breakpoints: {
-      // 100: {
-      //   slidesPerView: 1,
-      // },
-      // 575: {
-      //   slidesPerView: 2,
-      // },
       767: {
         slidesPerView: 1.5,
       },
@@ -268,7 +260,6 @@ window.addEventListener('load', () => {
   //推薦閱讀
   const recommendSwiper = new Swiper('.recommendSlider .swiper', {
     slidesPerView: 1.5,
-    // spaceBetween: 20,
     loop: true,
     centeredSlides: true,
     // 切換點
@@ -301,10 +292,8 @@ window.addEventListener('load', () => {
   //活動花絮
   const activitiesSwiper = new Swiper('.activitiesSwiper .swiper', {
     slidesPerView: 1.5,
-    // spaceBetween: 50,
     loop: true,
     centeredSlides: true,
-
     // 切換點
     pagination: {
       el: '.activitiesSwiper .swiperDots',
