@@ -52,8 +52,7 @@ table {
   }
 }
 .tableList {
-  overflow-x: scroll;
-  @include screen('mobile') {
+  @include screen('tablet') {
     background-color: transparent; //Force table to not be like tables anymore
     thead,
     tbody,
@@ -156,7 +155,7 @@ table {
   }
 }
 .tableWrapper {
-  overflow-x: scroll;
+  // overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
   @include screen('mobile') {
