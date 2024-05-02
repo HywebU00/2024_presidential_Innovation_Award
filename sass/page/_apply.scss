@@ -1,6 +1,9 @@
 .apply {
   @extend .cp;
   font-size: 1em;
+  .tableList {
+    overflow: hidden;
+  }
   table {
     margin-bottom: 2em;
     .date,
