@@ -266,7 +266,6 @@ table {
 // scrollTable style
 .tableWrapper {
   & > div {
-    overflow-x: scroll;
     overflow-y: hidden;
     scroll-behavior: smooth;
   }
