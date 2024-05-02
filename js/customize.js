@@ -78,7 +78,7 @@ window.addEventListener('load', () => {
   });
   const mpSlider = new Swiper('.mpSlider .swiper', {
     slidesPerView: 1,
-    loop: true,
+    loop: false,
     centeredSlides: true,
     spaceBetween: 0,
     autoplay: {
@@ -123,7 +123,7 @@ window.addEventListener('load', () => {
   });
   const industrySlider = new Swiper('.industrySlider .swiper', {
     slidesPerView: 1,
-    loop: true,
+    loop: false,
     centeredSlides: true,
     spaceBetween: 0,
     autoplay: {
@@ -229,7 +229,7 @@ window.addEventListener('load', () => {
   //廣告輪播
   const winnerSwiper = new Swiper('.winnerSlider .swiper', {
     slidesPerView: 1.5,
-    loop: true,
+    loop: false,
     centeredSlides: true,
     // 切換點
     pagination: {
@@ -260,7 +260,7 @@ window.addEventListener('load', () => {
   //推薦閱讀
   const recommendSwiper = new Swiper('.recommendSlider .swiper', {
     slidesPerView: 1.5,
-    loop: true,
+    loop: false,
     centeredSlides: true,
     // 切換點
     pagination: {
@@ -292,7 +292,7 @@ window.addEventListener('load', () => {
   //活動花絮
   const activitiesSwiper = new Swiper('.activitiesSwiper .swiper', {
     slidesPerView: 1.5,
-    loop: true,
+    loop: false,
     centeredSlides: true,
     // 切換點
     pagination: {
