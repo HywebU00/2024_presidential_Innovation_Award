@@ -269,7 +269,7 @@ window.addEventListener('load', () => {
   //
   //推薦閱讀
   const recommendSwiper = new Swiper('.recommendSlider .swiper', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     loop: false,
     spaceBetween: 40,
     // 切換點
@@ -290,8 +290,12 @@ window.addEventListener('load', () => {
       disabledClass: '.recommendSlider swiperArrow-disabled', //不可點選樣式
     },
     breakpoints: {
+      480: {
+        slidesPerView: 2,
+      },
+
       767: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       1000: {
         slidesPerView: 3,

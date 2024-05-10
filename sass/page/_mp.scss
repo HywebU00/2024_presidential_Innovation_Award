@@ -792,9 +792,11 @@ section {
     max-width: 70.5rem;
   }
   .swiper-slide {
-    margin-bottom: 3.75rem;
+    // margin-bottom: 3.75rem;
+    margin-bottom: 6rem;
     .pic {
-      height: rem(326);
+      // height: rem(326);
+      height: rem(280);
       overflow: hidden;
       img {
         object-fit: cover;
@@ -830,8 +832,8 @@ section {
       color: #909090;
     }
     .sticker {
-      height: rem(160);
-      width: rem(160);
+      height: rem(135);
+      width: rem(135);
       display: none;
       position: absolute;
       top: 20%;
@@ -843,7 +845,7 @@ section {
       align-items: center;
       line-height: 1.5em;
       text-align: center;
-      font-size: 1.25em;
+      font-size: 1em;
       span {
         display: block;
         font-size: 1.25em;

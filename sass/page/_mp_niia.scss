@@ -255,7 +255,8 @@
     max-width: 70.5rem;
   }
   .swiper-slide {
-    margin-bottom: 3.75rem;
+    margin-bottom: 6rem;
+    // margin-bottom: 3.75rem;
     .subtitle {
       color: #302a20;
     }
@@ -269,7 +270,8 @@
     //   }
     // }
     .pic {
-      height: rem(326);
+      // height: rem(326);
+      height: rem(236);
       overflow: hidden;
       img {
         object-fit: cover;
@@ -316,7 +318,12 @@
   // .swiper-slide-next {
   //   left: 5%;
   // }
-
+  .swiperBox {
+    padding: 0 1rem;
+  }
+  .swiperArrow {
+    top: 60%;
+  }
   .swiper-scrollbar {
     background: #e5e5e6 !important  ;
     max-width: 60%;
