@@ -79,20 +79,6 @@
       background: url(../vendor/swiper/ar.png) no-repeat;
     }
   }
-  // .swiper-slide-next,
-  // .swiper-slide-prev {
-  //   &:not(.swiper-slide-active) {
-  //     &::before {
-  //       position: absolute;
-  //       content: '';
-  //       width: 100%;
-  //       height: 100%;
-  //       opacity: 0.6;
-  //       background-color: #000;
-  //       top: 0;
-  //     }
-  //   }
-  // }
 }
 
 section {
@@ -648,9 +634,9 @@ section {
       margin-top: 1rem;
     }
 
-    .col {
-      margin-bottom: 2rem;
-    }
+    // .col {
+    //   margin-bottom: 2rem;
+    // }
   }
   @include screen('mobile') {
     .countItem {
@@ -803,6 +789,7 @@ section {
   }
   .swiper {
     margin-bottom: rem(108);
+    max-width: 70.5rem;
   }
   .swiper-slide {
     margin-bottom: 3.75rem;
@@ -849,7 +836,7 @@ section {
       position: absolute;
       top: 20%;
       border-radius: 50%;
-      left: -80px;
+      left: -55px;
       background: $colorPrimary;
       color: #fff;
       justify-content: center;
@@ -861,17 +848,21 @@ section {
         display: block;
         font-size: 1.25em;
       }
-      @include screen('tablet') {
-        height: rem(140);
-        width: rem(140);
-        left: -50px;
+
+      @media screen and (max-width: 1200px) {
+        height: rem(130);
+        width: rem(130);
+        left: -40px;
+        span {
+          font-size: 1.15em;
+        }
       }
       @include screen('mobile') {
         height: rem(120);
         width: rem(120);
-        left: -46px;
+        left: 10px;
         span {
-          font-size: 1.5em;
+          font-size: 1em;
         }
       }
     }
@@ -896,28 +887,22 @@ section {
       }
     }
   }
-  .swiper-slide-prev {
-    right: 3.8%;
-    @include screen('mobile') {
-      right: 8%;
-    }
-  }
-  .swiper-slide-next {
-    left: 3%;
-    @include screen('mobile') {
-      left: 6%;
-    }
-  }
-  .swiper-slide-active {
-    margin-left: 5%;
-  }
+
   .swiper-scrollbar {
     background: #232222 !important  ;
     max-width: 60%;
     left: 20% !important;
   }
+  .swiperArrow {
+    top: 60%;
+  }
   .swiper-scrollbar-drag {
     background-color: $colorPrimary !important;
+  }
+  @media screen and (max-width: 1200px) {
+    .swiperBox {
+      margin: 0 1rem;
+    }
   }
   @include screen('tablet') {
     .swiper-slide {
@@ -928,6 +913,10 @@ section {
   }
   @include screen('mobile') {
     .swiper-slide {
+      a {
+        padding: 0 3em;
+        display: block;
+      }
       .sticker {
         line-height: 1.5em;
         span {
@@ -945,7 +934,11 @@ section {
     padding: 0;
   }
   .activitiesSwiper {
+    padding: 0 1rem;
     padding-bottom: 7rem;
+    .swiper {
+      max-width: 70.5rem;
+    }
 
     .swiper-slide {
       .pic {
@@ -973,7 +966,7 @@ section {
       }
       .info {
         display: none;
-        padding: 6% 2% 16% 6%;
+        padding: 6% 2% 16% 3%;
         width: 70%;
         justify-content: space-between;
         align-items: center;
@@ -983,7 +976,7 @@ section {
         display: none;
         position: absolute;
         bottom: 13%;
-        right: 25%;
+        right: 27%;
         span {
           display: block;
         }
@@ -1021,7 +1014,6 @@ section {
           display: none;
         }
       }
-      width: 83.3% !important;
       position: relative;
       .more {
         display: block;
@@ -1036,8 +1028,30 @@ section {
         font-size: 1em;
         font-weight: 500;
         transition: all 0.5s;
+        overflow: hidden;
+
+        &::after {
+          position: absolute;
+          width: rem(130);
+          height: rem(130);
+          content: '';
+          z-index: -1;
+          // border-radius: 50%;
+          transform: rotate(45deg);
+          left: 80px;
+          transition: all 0.2s;
+          opacity: 0;
+          top: 80px;
+          background-color: $colorPrimary;
+        }
         &:hover {
           border-color: $colorPrimary;
+          color: #fff;
+          &::after {
+            opacity: 1;
+            top: 0px;
+            left: -10px;
+          }
         }
       }
       .info {
@@ -1073,6 +1087,10 @@ section {
       }
     }
   }
+  .swiperArrow {
+    top: 60%;
+  }
+
   @include screen('tablet') {
     .container {
       padding: 0 15px 0 0;
@@ -1212,7 +1230,7 @@ footer {
   }
 }
 .organizerSection {
-  background: $colorPrimary;
+  background: #eee;
   width: 100%;
   display: flex;
   padding-bottom: 0;
