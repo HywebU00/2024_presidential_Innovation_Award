@@ -318,7 +318,7 @@ window.addEventListener('load', () => {
     navigation: {
       nextEl: '.activitiesSection .nextSlider', //自行設定樣式
       prevEl: '.activitiesSection .prevSlider', //自行設定樣式
-      disabledClass: '.activitiesSection .swiperArrow-disabled', //不可點選樣式
+      disabledClass: '.activitiesSection swiperArrow-disabled', //不可點選樣式
     },
     breakpoints: {
       100: {
