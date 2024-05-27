@@ -134,6 +134,7 @@
       }
       .imgContainer {
         img {
+          object-fit: contain;
           transition: all 0.3s;
         }
       }
