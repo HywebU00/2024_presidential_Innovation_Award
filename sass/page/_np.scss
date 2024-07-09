@@ -80,7 +80,66 @@
     }
   }
 }
-
+.leftBlock.memberLeftBlock {
+  transition: all 0.5s;
+  @include screen('tablet') {
+    display: block;
+    position: fixed;
+    top: 200px;
+    width: 300px;
+    z-index: 999;
+    left: -260px;
+  }
+  @include screen('mobile') {
+    top: 70px;
+  }
+  .title {
+    align-items: center;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    @include screen('tablet') {
+      border-radius: 0.25rem 0 0 0;
+    }
+  }
+  .user {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5em 0;
+    background-color: #f2f2f2;
+  }
+  .handle {
+    font-size: 0;
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 61px;
+    background: url(../images/icon/icon_arrow_right.svg) 50% 50% no-repeat, $colorPrimary;
+    background-size: 14px 14px;
+    border-radius: 0 8px 8px 0;
+    right: -30px;
+    top: 0;
+    display: none;
+    cursor: pointer;
+    @include screen('tablet') {
+      display: block;
+    }
+  }
+  &.open {
+    left: 16px;
+    transition: all 0.5s;
+  }
+  .accordion {
+    ul {
+      li {
+        a {
+          padding: 10px 20px 10px 15px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
 .np {
   .submenu {
     margin-bottom: rem(60);

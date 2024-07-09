@@ -156,6 +156,9 @@
     background: url('../images/header2_bg.jpg') no-repeat;
     background-size: cover;
     background-position: right;
+    @include screen('tablet') {
+      background-size: auto;
+    }
   }
 }
 .blockTitle {
@@ -279,25 +282,9 @@
       font-size: 2em;
       font-weight: 400;
       color: #302a20;
-      // color: #909090;
       line-height: 1.25em;
       margin-bottom: 0.5rem;
     }
-
-    // &.swiper-slide-active {
-    //   .subtitle {
-    //     color: #302a20;
-    //   }
-    //   .title {
-    //     color: #302a20;
-    //   }
-    //   .pic {
-    //     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-    //     &::before {
-    //       background: rgba(0, 0, 0, 0);
-    //     }
-    //   }
-    // }
   }
   .swiperBox {
     padding: 0 1rem;

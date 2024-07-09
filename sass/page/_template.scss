@@ -41,9 +41,9 @@ body {
 .main {
   position: relative;
   margin: 0 auto;
-  // @include screen('mobile') {
-  //   padding-top: 60px;
-  // }
+  @include screen('mobile') {
+    padding-top: 60px;
+  }
   // 可先設定一個中央區塊最大寬，限制accessKey對齊
   h2 {
     line-height: 1.25em;
