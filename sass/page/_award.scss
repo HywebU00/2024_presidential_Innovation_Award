@@ -1,0 +1,141 @@
+.award {
+  @extend .apply;
+  .eventList {
+    ul {
+      .title {
+        min-width: 8em;
+        text-align: center;
+      }
+    }
+  }
+  .flexForm {
+    margin: 0;
+  }
+  .formGrid {
+    border-top: 0px;
+  }
+  table {
+    margin-bottom: 2em;
+    th {
+      width: 278px;
+    }
+
+    @include screen('tablet') {
+      th {
+        width: 50%;
+      }
+    }
+  }
+  .maintainTable {
+    td {
+      text-align: center;
+      &.time {
+        span {
+          display: block;
+        }
+      }
+    }
+    a {
+      &.btn {
+        border-radius: 0.25rem;
+        color: #fff;
+      }
+    }
+  }
+  .infoBlock {
+    margin: 0.5em 0 2em 0;
+    .title {
+      font-weight: 700;
+    }
+    .event {
+      &.numType {
+        list-style-type: decimal;
+        padding-left: 1.5em;
+      }
+    }
+  }
+  .additional {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    input {
+      width: calc(100% - 0.6em);
+    }
+    a,
+    button {
+      border-radius: 0.25rem;
+      min-width: unset;
+    }
+    .btn {
+      color: #fff;
+    }
+  }
+  .uploadGrp {
+    flex-wrap: nowrap;
+    .uploadBtn {
+      position: relative;
+      padding: 0.5em 1.25em;
+      min-width: unset;
+      top: 0;
+      right: 0;
+      overflow: unset;
+      input[type='file'] {
+        width: 100%;
+        padding: 0.5rem;
+      }
+    }
+    .upload_file {
+      opacity: 1;
+      color: #000;
+    }
+    button {
+      flex: none;
+    }
+  }
+  .fileLink {
+    @extend .webLink;
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        margin-left: 0.25em;
+        color: mix($aColor, #000, 70%);
+      }
+      &::before {
+        top: 0.5em;
+      }
+    }
+    .btn {
+      padding: 0.25em;
+      min-width: 2em;
+
+      flex: none;
+      i {
+        font-size: 1.25em;
+      }
+    }
+  }
+  .btnGrp {
+    justify-content: center;
+  }
+  .i_delete_dark {
+    &:before {
+      background: url('../../images/icon/icon_delete_dark.svg') center center no-repeat;
+      background-size: contain;
+      margin-top: -0.1em;
+      margin-bottom: 0.1em;
+    }
+  }
+}
+
+.formCol_4_4_4 {
+  &.address {
+    select + input {
+      width: calc(100% - 0.6em);
+      flex-basis: calc(100% - 0.6em);
+      max-width: calc(100% - 0.6em);
+    }
+  }
+}
