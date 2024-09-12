@@ -128,8 +128,88 @@
       margin-bottom: 0.1em;
     }
   }
+  &:has(.loginCard) {
+    justify-content: center;
+    display: flex;
+
+    .loginCard {
+      width: 65%;
+      .formCard > div {
+        z-index: 1;
+        position: relative;
+      }
+      .btnGrp {
+        margin-top: 1em;
+      }
+    }
+    .formCard {
+      position: relative;
+      background: url('../images/about_bg.jpg') no-repeat;
+      background-size: cover;
+      &::after {
+        content: '';
+        position: absolute;
+        opacity: 0.5;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+      .loginlink {
+        display: flex;
+        justify-content: center;
+        a {
+          margin-left: 0.75em;
+        }
+      }
+    }
+    @include screen('tablet') {
+      .loginCard {
+        width: 80%;
+      }
+    }
+    @include screen('mobile') {
+      .loginCard {
+        width: 100%;
+      }
+    }
+  }
+}
+.wrapper {
+  &.niia {
+    .award {
+      &:has(.loginCard) {
+        .formCard {
+          background: url('../images/about2_bg.jpg') no-repeat;
+        }
+      }
+    }
+  }
 }
 
+.centerBlock {
+  &:has(.loginCard) {
+    h2.title {
+      text-align: center;
+    }
+  }
+}
+.captcha {
+  &.formGrp {
+    &:last-child {
+      border-bottom: 1px dashed #ddd;
+    }
+  }
+  .code {
+    flex-wrap: nowrap;
+    display: flex;
+    width: 100%;
+    input {
+      width: 100%;
+    }
+  }
+}
 .formCol_4_4_4 {
   &.address {
     select + input {

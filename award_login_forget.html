@@ -21,6 +21,7 @@
   <!-- 直接跳主內容區 -->
   <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
   <!-- wrapper Start -->
+  <!-- 產業創新獎頁面登入頁面 wrapper請新增 className "niia "-->
   <div class="wrapper ">
     <!-- header Start -->
     <header>
@@ -109,6 +110,7 @@
                 </ul>
               </li>
               <li><a href="http://www.google.com">最新消息</a></li>
+
               <li>
                 <a href="#">參選資訊</a>
                 <ul>
@@ -249,6 +251,7 @@
     <!-- 內頁新增一個classname-->
     <a class="accessKey" href="#aC" id="ac" accesskey="C" title="主要內容區">:::</a>
     <div class="container">
+
       <!-- 主要內容區 -->
       <div class="centerBlock">
         <nav aria-label="Breadcrumb" class="breadcrumb">
@@ -259,105 +262,43 @@
           </ul>
         </nav>
         <!-- h2節點 -->
-        <h2 class="title">會員資料</h2>
-        <ol class="progress serveProgress">
-          <li class="complete" data-step="1">
-            個資聲明
-          </li>
-          <li class="complete" data-step="2">
-            Email驗證
-          </li>
-          <li class="active" data-step="3">
-            會員資料
-          </li>
-          <li class="" data-step="4">
-            完成註冊
-          </li>
-        </ol>
+        <h2 class="title">忘記密碼</h2>
         <!-- award Start -->
         <section class="award">
-          <div class="note">註：<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr> 欄位，不能為空白。</div>
-          <div class="flexForm formGrid">
+          <div class="flexForm formGrid loginCard">
             <div class="formCard">
               <div class="">
                 <div class="formGrp">
-                  <label for="username" class="formTitle" aria-required="true">帳號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                  <label for="id" class="formTitle" aria-required="true">帳號
+                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
                   <div class="formContent">
-                    <input type="text" id="username" value="test123" title="請輸入單位名稱" />
+                    <input id="id" name="" type="text" value="" title="請輸入驗證碼" />
                   </div>
                 </div>
                 <div class="formGrp">
-                  <label for="phone" class="formTitle" aria-required="true">密碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                  <label for="mail" class="formTitle" aria-required="true">Email
+                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
                   <div class="formContent">
-                    <div class="input_i">
-                      <i class="i_lock_dark"></i>
-                      <input class="password" name="password" type="password" placeholder="請輸入密碼" title="請輸入密碼" />
-                      <button type="button" class="passwordEye hide">顯示密碼</button>
+                    <input id="mail" name="" type="text" value="" title="請輸入驗證碼" />
+                  </div>
+                </div>
+                <div class="formGrp captcha">
+                  <div class="formTitle">驗證碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
+                  <div class="formContent">
+                    <div class="code">
+                      <img src="images/basic/captcha.gif" alt="" class="captcha" />
+                      <input name="" type="text" value="" title="請輸入驗證碼" />
                     </div>
-                    <div class="help">
-                      密碼長度為12碼以上, 15碼以下<br />
-                      密碼需同時包含英文字母大寫、小寫、數字以及符號的組合，符號例如[!@#$%^&*-_=+{}:;>,<.?]等 </div>
+                    <div class="">
+                      <button type="button" class="btn"><i class="i_reflash_dark" aria-hidden="true" focusable="false"></i>重新整理</button>
+                      <button type="button" class="btn"><i class="i_play_dark" aria-hidden="true" focusable="false"></i>語音播放</button>
                     </div>
-                  </div>
-                </div>
-                <div class="formGrp">
-                  <label for="passwordcheck" class="formTitle" aria-required="true">確認密碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                  <div class="formContent">
-                    <input type="password" id="passwordcheck" title="請輸入密碼" />
-                  </div>
-                </div>
-                <div class="formGrp">
-                  <label for="name" class="formTitle" aria-required="true">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                  <div class="formContent">
-                    <input type="text" id="name" title="請輸入單位名稱" />
-                  </div>
-                </div>
-                <div class="formGrp">
-                  <label for="tel" class="formTitle" aria-required="true">聯絡電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                  <div class="formContent">
-                    <input name="phone" id="tel" type="tel" title="請輸入電話" />
-                  </div>
-                </div>
-                <div class="formGrp">
-                  <label for="email" class="formTitle" aria-required="true">Email<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                  <div class="formContent ">
-                    <div class="additional">
-                      <input type="text" value="test123@gmail.com" name="" title="請輸入條件">
-                      <a href="" class="btn btnSubmit ">修改信箱</a>
-                    </div>
-                    <div class="help">
-                      如需修改，系統將重新驗證
-                    </div>
-                  </div>
-                </div>
-                <div class="formGrp" role="group" aria-labelledby="fake-legend">
-                  <label class="formTitle">是否為科專<br />法人單位<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                  <div class="formContent" id="fake-legend">
-                    <div class="radioGrp formInline">
-                      <label> <input type="radio" name="sampleRadio6" value="" title="售票" checked />是</label>
-                      <label> <input type="radio" name="sampleRadio6" value="" title="免費索票" />否</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="formGrp">
-                  <!-- 使用aria-required屬性指出必填的表單欄位 -->
-                  <label for="class" class="formTitle" aria-required="true">科專法單位</label>
-                  <div class="formContent">
-                    <select name="" id="class">
-                      <option value="" selected disabled>請選擇科專法人單位</option>
-                      <option value="">科技研發</option>
-                      <option value="">文創加值</option>
-                      <option value="">服務創新</option>
-                      <option value="">文創加值</option>
-                      <option value="">...</option>
-                    </select>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="btnGrp formInline">
-              <button type="button" class="btn btnReset">清除重填</button>
-              <button type="button" class="btn btnSubmit">註冊會員</button>
+              <div class="btnGrp formInline">
+                <button type="button" class="btn btnSubmit">寄送重設密碼連結</button>
+              </div>
             </div>
           </div>
         </section>
