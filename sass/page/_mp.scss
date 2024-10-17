@@ -14,9 +14,7 @@
       @include screen('tablet') {
         max-height: unset;
       }
-      @media (min-width: 1660px) {
-        object-fit: contain;
-      }
+      
     }
     .titleBox {
       position: absolute;
@@ -83,6 +81,16 @@
     }
   }
 }
+.mpSlider{
+  .item{
+    img{
+      @media (min-width: 1660px) {
+        object-fit: contain;
+      }
+    }
+  }
+}
+
 
 section {
   .titleBox {
