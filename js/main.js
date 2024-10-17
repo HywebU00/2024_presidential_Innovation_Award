@@ -452,10 +452,11 @@ function topNav() {
 
   //複製navigation
   const nav = document.querySelector('.navigation');
+
   if (nav) {
     const cloneNav = nav.cloneNode(true);
     mobileArea.append(cloneNav);
-
+    //mobileArea.append(nav);
     // 移除手機版字體大小按鈕
     const sideLanguage = document.querySelector('.mobileArea .fontSize');
     if (sideLanguage) {
@@ -465,7 +466,7 @@ function topNav() {
     }
   }
 }
-
+// topNav();
 // -----------------------------------------------------------------------
 // ----- webSearch設定 ------------------------------------------------
 // -----------------------------------------------------------------------
@@ -563,10 +564,13 @@ function mainMenuSetup() {
   // menu初始化 複製手機版側欄選單
   const mobileArea = document.querySelector('.mobileArea');
   const cloneMenu = mainMenu.cloneNode(true);
+
   cloneMenu.classList.add('sideMainMenu');
   cloneMenu.classList.remove('mainMenu', 'megaMenu', 'menu');
   mobileArea.append(cloneMenu);
-
+  const nav = document.querySelector('.navigation');
+  const cloneNav = nav.cloneNode(true);
+  mobileArea.append(cloneNav);
   ////////////////////////////////////////////////////////////////////////////////
   let windowHeight = window.innerHeight;
   let windowWidth = window.innerWidth;
