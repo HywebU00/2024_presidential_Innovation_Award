@@ -110,7 +110,7 @@ window.addEventListener('load', () => {
         slidesPerView: 1,
       },
       1600: {
-        slidesPerView: 1.2,
+        slidesPerView: 1,
       },
     },
   });
