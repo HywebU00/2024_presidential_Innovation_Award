@@ -84,6 +84,11 @@ window.addEventListener('load', () => {
     autoplay: {
       delay: 5000,
     },
+    navigation: {
+      nextEl: '.winnerSlider .nextSlider', //自行設定樣式
+      prevEl: '.winnerSlider .prevSlider', //自行設定樣式
+      disabledClass: '.winnerSlider swiperArrow-disabled', //不可點選樣式
+    },
     // 切換點
     pagination: {
       el: '.mpSlider .swiperDots',
@@ -234,7 +239,6 @@ window.addEventListener('load', () => {
   }
   const winnerSwiper = new Swiper('.winnerSlider .swiper', {
     slidesPerView: 1,
-
     spaceBetween: 70,
     loop: winnerSlideLen <= 1 ? false : true,
     centeredSlides: true,

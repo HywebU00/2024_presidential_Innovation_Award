@@ -14,7 +14,6 @@
       @include screen('tablet') {
         max-height: unset;
       }
-      
     }
     .titleBox {
       position: absolute;
@@ -75,22 +74,26 @@
   }
   .swiperArrow {
     &:before {
-      width: 40px;
-      height: 40px;
-      background: url(../vendor/swiper/ar.png) no-repeat;
+      width: 57px;
+      height: 50px;
+      background: url(../images/arr_l.png) no-repeat;
+    }
+    @include screen('mobile') {
+      &::before {
+        scale: 0.75;
+      }
     }
   }
 }
-.mpSlider{
-  .item{
-    img{
+.mpSlider {
+  .item {
+    img {
       @media (min-width: 1660px) {
         object-fit: contain;
       }
     }
   }
 }
-
 
 section {
   .titleBox {
