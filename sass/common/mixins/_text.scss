@@ -40,13 +40,16 @@
 @mixin aSetting($color: $aColor, $line: none) {
   text-decoration: $line;
   color: $color;
+
   &:hover,
   &:focus-visible {
     color: $aHover;
     cursor: pointer;
   }
+
   &:focus-visible {
     outline: $aHover 2px solid;
+    outline-offset: -2px;
   }
 }
 

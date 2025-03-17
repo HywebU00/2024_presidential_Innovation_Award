@@ -1,6 +1,87 @@
 // .mp_niia
+.mobileSidebar .mobileArea {
+
+  a,
+  button {
+    &:focus-visible {
+      outline: lighten($aHover, 20) 2px solid;
+    }
+  }
+}
+
+.mobileSidebar button.sidebarClose:focus-visible {
+  outline: lighten($aHover, 20) 2px solid;
+}
+
 .industrySlider {
   margin-top: rem(60);
+
+  .controlBox {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 9;
+    display: none;
+    gap: 5px;
+
+    &.active {
+      display: flex;
+    }
+
+    button {
+      background: #000;
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      aspect-ratio: 1;
+      font-size: 14px;
+      margin: 0;
+      border: none;
+
+      &.active {
+        background: $colorPrimary;
+      }
+
+      // &:focus-visible {
+      //   display: block;
+      //   outline: $colorPrimary 2px solid;
+      //   outline-offset: -2px;
+      //   isolation: isolate;
+      //   opacity: 1 !important;
+      // }
+    }
+  }
+
+  .swiper-pagination-bullet {
+    aspect-ratio: 1/1;
+    border-radius: 0 !important;
+
+    &:focus-visible {
+      outline: lighten($aHover, 20) 2px solid;
+      outline-offset: -2px;
+      opacity: 1 !important;
+    }
+  }
+
+  .swiper-slide > a {
+    display: block;
+
+    &:focus-visible {
+      display: block;
+      outline: lighten($aHover, 20) 2px solid;
+      outline-offset: -2px;
+      isolation: isolate;
+      opacity: 1 !important;
+
+      img {
+        z-index: -1;
+      }
+    }
+  }
+
   .container {
     max-width: rem(1130);
     padding: 0 0.5em;
@@ -8,35 +89,44 @@
     align-items: flex-start;
     margin-bottom: 1em;
   }
+
   .banner {
     width: calc(100% - 175px);
   }
+
   .swiper {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     max-height: rem(500);
+
     img {
       height: 100%;
       max-height: 500px;
       width: 100%;
     }
+
     @include screen('tablet') {
       max-height: rem(420);
+
       img {
         max-height: rem(420);
       }
     }
+
     @include screen('mobile') {
       max-height: rem(360);
+
       img {
         max-height: rem(360);
       }
     }
   }
+
   .swiperDots {
     justify-content: flex-start;
     padding-bottom: 1.5em;
     margin-top: 1.25em;
     min-height: rem(72);
+
     button {
       &.swiper-pagination-bullet {
         width: 50px !important;
@@ -46,6 +136,7 @@
         font-family: 'Cardo', serif;
         margin: 0 0.5em;
       }
+
       &.swiper-pagination-bullet-active {
         font-size: 2.5em;
         position: relative;
@@ -62,15 +153,18 @@
       }
     }
   }
+
   .linkList {
     background: none;
     margin-left: rem(45);
     margin-right: rem(10);
+
     ul {
       flex-direction: column;
       align-items: end;
       padding-top: 0;
     }
+
     li {
       background: #000;
       width: rem(112);
@@ -82,6 +176,7 @@
       margin: rem(14) 0;
       flex: auto;
       transition: 0.5s all;
+
       a {
         font-size: 1.2em;
         line-height: 1.2em;
@@ -91,15 +186,18 @@
         justify-content: center;
         align-items: center;
       }
+
       &:hover {
         background: #634320;
         transition: 0.5s all;
+
         a {
           color: #fff;
         }
       }
     }
   }
+
   // .swiper-slide {
   //   max-height: rem(500);
   // }
@@ -114,8 +212,10 @@
     .banner {
       width: calc(100% - 130px);
     }
+
     .linkList {
       margin-left: 1.5rem;
+
       li {
         width: rem(90);
         height: rem(90);
@@ -124,28 +224,35 @@
       }
     }
   }
+
   @include screen('mobile') {
     margin-top: 1rem;
+
     .container {
       flex-wrap: wrap;
     }
+
     .banner {
       width: 100%;
     }
+
     .linkList {
       display: flex;
       justify-content: center;
       width: 100%;
       margin: 0;
+
       ul {
         flex-direction: row;
         padding-bottom: 0;
+
         li {
           margin: 0.25em;
         }
       }
     }
   }
+
   @include screen('xsMobile') {
     .linkList {
       li {
@@ -154,6 +261,7 @@
         font-size: 1rem;
       }
     }
+
     .swiperDots {
       button {
         &.swiper-pagination-bullet-active {
@@ -163,22 +271,26 @@
     }
   }
 }
+
 .topAlert {
   span {
     background: #fff;
     color: $colorWord;
   }
 }
+
 .header {
   &:before {
     background: url('../images/header2_bg.jpg') no-repeat;
     background-size: cover;
     background-position: right;
+
     @include screen('tablet') {
       background-size: auto;
     }
   }
 }
+
 .blockTitle {
   div {
     &:first-child {
@@ -189,15 +301,35 @@
 
 .newsSlider,
 .eventSlider {
+  .swiper-slide {
+    & > a {
+      display: block;
+
+      &:focus-visible {
+        display: block;
+        outline: $colorPrimary 2px solid;
+        outline-offset: -2px;
+        isolation: isolate;
+        opacity: 1 !important;
+
+        .pic {
+          z-index: -1;
+        }
+      }
+    }
+  }
+
   .date {
     background-color: #000000;
   }
+
   .hot {
     background: $colorSecondary;
     font-family: 'DM Serif Display';
     font-size: 1.5em;
   }
 }
+
 .newsSlider {
   @include screen('tablet') {
     .swiperBox {
@@ -210,14 +342,18 @@
   .titleBox {
     padding-top: 0;
   }
+
   .list {
     margin: 1.125em;
+
     ul {
       @include liReset;
+
       li {
         display: flex;
         margin-bottom: 0.3em;
         color: #474747;
+
         i {
           height: 30px;
           width: 30px;
@@ -232,22 +368,27 @@
     }
   }
 }
+
 .aboutSection {
   background: url('../images/about2_bg.jpg') no-repeat;
   background-size: cover;
   background-position: right;
 }
+
 .numSection {
   background: url(../images/num2_bg.png) no-repeat;
   background-position: center;
   background-size: cover;
+
   .container {
     padding: 1em;
   }
+
   .item {
     position: relative;
     // margin-bottom: 2rem;
     padding-bottom: 2rem;
+
     &::after {
       content: '';
       position: absolute;
@@ -257,29 +398,52 @@
       bottom: 0;
       left: calc(50% - 16px);
     }
+
     @include screen('tablet') {
       &::after {
         display: none;
       }
     }
   }
+
   .num {
     font-size: 3rem;
   }
 }
+
 .recommendSlider {
   .container {
     padding: 0;
   }
+
   .swiper {
     margin-bottom: rem(108);
     max-width: 70.5rem;
   }
+
   .swiper-slide {
     margin-bottom: 6rem;
+
+    & > a {
+      display: block;
+
+      &:focus-visible {
+        display: block;
+        outline: $colorPrimary 2px solid;
+        outline-offset: -2px;
+        isolation: isolate;
+        opacity: 1 !important;
+
+        .pic {
+          z-index: -1;
+        }
+      }
+    }
+
     .subtitle {
       color: #302a20;
     }
+
     .title {
       color: #302a20;
     }
@@ -287,6 +451,7 @@
     .pic {
       height: rem(236);
       overflow: hidden;
+
       img {
         object-fit: contain;
         margin: 0 auto;
@@ -294,8 +459,10 @@
         height: 100%;
         background: #eee;
       }
+
       position: relative;
     }
+
     .title {
       font-size: 2em;
       font-weight: 400;
@@ -304,24 +471,30 @@
       margin-bottom: 0.5rem;
     }
   }
+
   .swiperBox {
     padding: 0 1rem;
   }
+
   .swiperArrow {
     top: 60%;
   }
+
   .swiper-scrollbar {
-    background: #e5e5e6 !important  ;
+    background: #e5e5e6 !important;
     max-width: 60%;
     height: 6px;
     left: 20% !important;
   }
+
   .swiper-scrollbar-drag {
     background-color: $colorWord !important;
   }
 }
+
 .organizerSection {
   background: #f7f7f5;
+
   .container {
     > ul {
       > li {
@@ -330,16 +503,33 @@
     }
   }
 }
+
 .activitiesSection {
   background: url('../images/activitie2_bg.jpg') no-repeat right;
   background-size: cover;
+
   .activitiesSwiper {
     .swiper-slide {
+      & > a {
+
+        &:focus-visible {
+          outline: $colorPrimary 2px solid;
+          outline-offset: -2px;
+          isolation: isolate;
+          opacity: 1 !important;
+
+          .pic {
+            z-index: -1;
+          }
+        }
+      }
+
       .title {
         line-height: 1.25em;
       }
     }
   }
+
   @include screen('tablet') {
     .activitiesSwiper {
       .swiper-slide {
@@ -350,9 +540,11 @@
     }
   }
 }
+
 .submenu {
   li {
     a {
+
       &:hover,
       &:focus-visible {
         background-color: rgb(104, 77, 49, 0.1);

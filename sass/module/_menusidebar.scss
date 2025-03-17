@@ -12,9 +12,8 @@
   box-sizing: border-box;
   transition: 0.3s $cubic;
   transform: translateX(-300px);
-  @include screen('mobileMin') {
-    display: none;
-  }
+  display: none;
+
   .mobileArea {
     width: 300px;
     padding: 3em 0;
@@ -58,6 +57,11 @@
         text-decoration: none;
         transition: 0.3s $cubic;
         text-align: left;
+
+        &:focus-visible {
+          outline: lighten($aHover, 20) 2px solid;
+          outline-offset: -2px;
+        }
       }
 
       & > ul {
@@ -228,6 +232,7 @@
         padding: 0.6em 1em;
         background: rgba(0, 0, 0, 0.4);
         color: #fff;
+
         &:after {
           top: 1.3em;
         }
@@ -250,6 +255,7 @@
         padding: 0;
         border: none;
         background: none;
+        display: none;
 
         li {
           width: 100%;
@@ -281,9 +287,17 @@
     border: none;
     background: none;
     border: none;
+    z-index: 99;
 
-    &:hover,
     &:focus-visible {
+      display: block;
+      outline: $colorPrimary 2px solid;
+      outline-offset: -2px;
+      isolation: isolate;
+      opacity: 1 !important;
+    }
+
+    &:hover {
       box-shadow: none;
     }
 

@@ -1,20 +1,93 @@
 /////////////////////////////////////////////////////////以下為demo範例///
+.mobileSidebar .mobileArea {
+
+  a,
+  button {
+    &:focus-visible {
+      outline: #fff 2px solid !important;
+    }
+  }
+}
+
 
 // 首頁區塊設定
+.mpSlider {
+  position: relative;
+
+  .controlBox {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 9;
+    display: none;
+    gap: 5px;
+
+    &.active {
+      display: flex;
+    }
+
+    button {
+      background: #000;
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      aspect-ratio: 1;
+      font-size: 14px;
+      margin: 0;
+      border: none !important;
+
+      &.active {
+        background: $colorPrimary;
+      }
+
+      // &:focus-visible {
+      //   display: block;
+      //   outline: lighten($aHover, 20) 2px solid;
+      //   outline-offset: -2px;
+      //   isolation: isolate;
+      //   opacity: 1 !important;
+      // }
+    }
+  }
+
+  .swiper-slide > a {
+    display: block;
+
+    &:focus-visible {
+      display: block;
+      outline: lighten($aHover, 20) 2px solid;
+      outline-offset: -2px;
+      isolation: isolate;
+      opacity: 1 !important;
+
+      img {
+        z-index: -1;
+      }
+    }
+  }
+}
+
 .mpSlider,
 .industrySlider {
+
   .container {
     max-width: unset;
     padding: 0;
   }
+
   .item {
     img {
       max-height: rem(720);
       object-fit: cover;
+
       @include screen('tablet') {
         max-height: unset;
       }
     }
+
     .titleBox {
       position: absolute;
       max-width: rem(1200);
@@ -27,38 +100,47 @@
       flex-direction: column;
       justify-content: center;
       line-height: 1;
+
       @include screen('mobile') {
         padding: 20px 60px;
       }
+
       h1,
       h2 {
         padding: 0;
         margin: 0 0 10px;
         font-size: rem(24);
+
         @include screen('mobile') {
           font-size: rem(18);
         }
       }
+
       h1 {
         font-size: rem(40);
+
         @include screen('tablet') {
           font-size: rem(30);
         }
+
         @include screen('mobile') {
           font-size: rem(22);
         }
       }
+
       p {
         margin: 0;
         font-size: rem(16);
       }
     }
+
     .txtBox {
       position: absolute;
       background: rgb(8 31 56/80%);
       bottom: 0;
       left: 0;
       width: 100%;
+
       .txt {
         font-size: rem(18);
         padding: 20px;
@@ -66,18 +148,21 @@
         margin: 0 auto;
         color: #fff;
         max-width: 75rem;
+
         @include screen('tablet') {
           font-size: rem(16);
         }
       }
     }
   }
+
   .swiperArrow {
     &:before {
       width: 57px;
       height: 50px;
       background: url(../images/arr_l.png) no-repeat;
     }
+
     @include screen('mobile') {
       &::before {
         scale: 0.75;
@@ -85,6 +170,7 @@
     }
   }
 }
+
 .mpSlider {
   .item {
     img {
@@ -101,13 +187,16 @@ section {
     text-align: center;
     font-weight: bold;
     padding: 8% 0 4.8%;
+
     @include screen('tablet') {
       font-size: rem(22);
     }
   }
+
   .listBox {
     margin-bottom: 30px;
   }
+
   .more {
     display: block;
     width: 170px;
@@ -126,14 +215,17 @@ section {
   .item {
     border: #e2e2e2 1px solid;
     border-width: 1px 0;
+
     a {
       display: flex;
       align-items: center;
       padding: 20px 0;
+
       @include screen('xsMobile') {
         align-items: flex-start;
         flex-direction: column;
       }
+
       &:hover,
       &:focus-visible {
         .title {
@@ -142,19 +234,23 @@ section {
         }
       }
     }
+
     & + .item {
       border-width: 0 0 1px;
     }
   }
+
   .date {
     text-align: center;
     width: 170px;
     color: #545454;
+
     @include screen('xsMobile') {
       text-align: left;
       margin-bottom: 10px;
     }
   }
+
   .title {
     flex: 1 0 calc(100% - 170px);
     overflow: hidden;
@@ -172,6 +268,7 @@ section {
   .item a {
     display: block;
   }
+
   .date,
   .txt,
   .title {
@@ -179,11 +276,13 @@ section {
     margin-right: 20px;
     position: relative;
     z-index: 1;
+
     @include screen('mobile') {
       margin-left: 0px;
       margin-right: 0px;
     }
   }
+
   .title {
     margin-top: -10%;
     margin-bottom: 20px;
@@ -193,6 +292,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     span {
       background: #000;
       padding: 5px 10px;
@@ -202,6 +302,7 @@ section {
       margin-bottom: 5px;
     }
   }
+
   .date {
     font-size: rem(18);
     color: #030303;
@@ -210,9 +311,11 @@ section {
     margin-bottom: 30px;
     position: relative;
     letter-spacing: 2px;
+
     @include screen('tablet') {
       font-size: rem(16);
     }
+
     &::before {
       content: '';
       position: absolute;
@@ -224,6 +327,7 @@ section {
       background: #001827;
     }
   }
+
   .txt {
     font-size: rem(16);
     line-height: 1.6;
@@ -236,19 +340,24 @@ section {
   .flexSet {
     align-items: flex-end;
   }
+
   .item {
     margin-bottom: 30px;
+
     .pic {
       line-height: 0;
     }
+
     .col {
       padding: 0;
       margin: 0;
+
       & + .col {
         padding: 20px 0 0 3%;
       }
     }
   }
+
   .title {
     margin-bottom: 20px;
     letter-spacing: 2px;
@@ -257,6 +366,7 @@ section {
     font-weight: 500;
     line-height: 1.6;
   }
+
   .date {
     font-size: rem(14);
     color: #666666;
@@ -266,6 +376,7 @@ section {
     position: relative;
     letter-spacing: 2px;
   }
+
   .txt {
     font-size: 1em;
     line-height: 1.6;
@@ -278,13 +389,16 @@ section {
   .item a {
     display: block;
     padding-right: 20px;
+
     @include screen('mobile') {
       padding-right: 0px;
     }
   }
+
   .pic {
     position: relative;
     margin-bottom: 10px;
+
     &::before {
       content: '';
       position: absolute;
@@ -296,6 +410,7 @@ section {
       width: 100%;
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
     }
+
     img {
       width: 100%;
       aspect-ratio: 23/31;
@@ -303,6 +418,7 @@ section {
       object-fit: cover;
     }
   }
+
   .topBox {
     position: absolute;
     bottom: 0;
@@ -310,12 +426,14 @@ section {
     right: -20px;
     z-index: 2;
   }
+
   .txt {
     margin-left: 30px;
     margin-right: 0px;
     position: relative;
     z-index: 1;
   }
+
   .title {
     padding: 0;
     letter-spacing: 2px;
@@ -323,6 +441,7 @@ section {
     flex-direction: column;
     align-items: flex-start;
     margin: 0 0 20px 0;
+
     span {
       background: #000;
       padding: 5px 10px;
@@ -332,6 +451,7 @@ section {
       margin-bottom: 5px;
     }
   }
+
   .date {
     font-size: rem(18);
     color: #030303;
@@ -340,6 +460,7 @@ section {
     margin-bottom: 30px;
     position: relative;
     letter-spacing: 2px;
+
     &::before {
       content: '';
       position: absolute;
@@ -351,6 +472,7 @@ section {
       background: #001827;
     }
   }
+
   .txt {
     font-size: rem(16);
     line-height: 1.6;
@@ -363,6 +485,7 @@ section {
   .item a {
     display: block;
     position: relative;
+
     &::before {
       content: '';
       position: absolute;
@@ -372,9 +495,11 @@ section {
       background: rgb(0 0 0/20%) url('../images/demo/icon_play.png') center no-repeat;
       transition: 0.3s ease-out;
     }
+
     img {
       display: block;
     }
+
     &:hover {
       &:before {
         opacity: 0;
@@ -394,10 +519,12 @@ section {
     overflow: hidden;
     margin: 0 auto 10px;
     background: linear-gradient(135deg, rgba(0, 93, 157, 1) 20%, rgba(152, 209, 167, 1) 100%);
+
     img {
       width: 60%;
     }
   }
+
   .txt {
     text-align: center;
     color: #000;
@@ -409,11 +536,14 @@ section {
 .listTypeG {
   padding-bottom: 3%;
   background: url('../images/demo/listtypeg_bg.jpg') center no-repeat;
+
   .item a {
     display: block;
   }
+
   .pic {
     position: relative;
+
     img {
       width: 100%;
       aspect-ratio: 1/2;
@@ -421,6 +551,7 @@ section {
       object-fit: cover;
     }
   }
+
   .topBox {
     position: absolute;
     inset: 20px;
@@ -429,6 +560,7 @@ section {
     flex-direction: column;
     justify-content: space-between;
   }
+
   .title {
     padding: 0;
     letter-spacing: 2px;
@@ -436,6 +568,7 @@ section {
     flex-direction: column;
     align-items: flex-start;
     margin: 0;
+
     span {
       background: #000;
       padding: 5px 10px;
@@ -445,6 +578,7 @@ section {
       margin-bottom: 5px;
     }
   }
+
   .date {
     font-size: rem(18);
     color: #030303;
@@ -453,6 +587,7 @@ section {
     margin-bottom: 30px;
     position: relative;
     letter-spacing: 2px;
+
     &::before {
       content: '';
       position: absolute;
@@ -468,6 +603,7 @@ section {
 
 .adSlider {
   padding: 3% 0 0;
+
   .swiperBox {
     padding: 0 50px;
   }
@@ -476,15 +612,18 @@ section {
 .blockTitle {
   div {
     margin-top: 1.5rem;
+
     &:first-child {
       font-family: 'Assistant', sans-serif;
       font-weight: 400;
     }
+
     &:last-child {
       text-shadow: #0000002b 0px 5px 30px;
     }
   }
 }
+
 .topAlert {
   background: #000;
   color: #fff;
@@ -495,6 +634,7 @@ section {
   transition: all 0.3s ease;
   overflow: hidden;
   position: relative;
+
   span {
     margin: 0 0.75rem;
     display: inline-block;
@@ -502,13 +642,16 @@ section {
     background: $colorPrimary;
     border-radius: 0.25rem;
   }
+
   .txt {
     display: inline-block;
   }
+
   &.none {
     padding: 0 rem(60);
     height: 0;
   }
+
   .close {
     text-indent: -9999px;
     color: transparent;
@@ -522,6 +665,7 @@ section {
     position: absolute;
     right: 0;
     top: 0;
+
     &::before {
       content: '';
       width: 100%;
@@ -536,9 +680,11 @@ section {
       background: #fff;
     }
   }
+
   @include screen('mobile') {
     margin-top: 60px;
     padding: 0.625rem 1rem;
+
     .txt {
       display: block;
       margin-bottom: 0.5rem;
@@ -546,12 +692,15 @@ section {
     }
   }
 }
+
 .aboutSection {
   background: url(../images/about_bg.jpg) no-repeat;
   background-size: cover;
   min-height: rem(640);
+
   .container {
     max-width: rem(820);
+
     .txt {
       font-weight: 500;
       line-height: 2em;
@@ -563,12 +712,14 @@ section {
       }
     }
   }
+
   @include screen('tablet') {
     .txt {
       margin-bottom: 3.5em;
     }
   }
 }
+
 .numSection {
   background: url(../images/num_bg.jpg) no-repeat;
   background-size: cover;
@@ -579,12 +730,15 @@ section {
   .container {
     width: 100%;
   }
+
   .flexSet {
     width: 100%;
   }
+
   .countItem {
     display: flex;
     justify-content: center;
+
     i {
       width: rem(82);
       height: rem(82);
@@ -595,6 +749,7 @@ section {
       justify-content: center;
     }
   }
+
   .num {
     display: flex;
     justify-content: center;
@@ -603,10 +758,12 @@ section {
     font-family: 'DM Serif Display';
     font-size: 3.5em;
   }
+
   .item {
     position: relative;
     // margin-bottom: 2rem;
     padding-bottom: 2rem;
+
     &::after {
       content: '';
       position: absolute;
@@ -616,17 +773,20 @@ section {
       bottom: 0;
       left: calc(50% - 16px);
     }
+
     @include screen('tablet') {
       &::after {
         display: none;
       }
     }
   }
+
   .txt {
     text-align: center;
     font-weight: 500;
     margin-top: 1.5rem;
   }
+
   @media screen and (max-width: 1200px) {
     .countItem {
       i {
@@ -634,6 +794,7 @@ section {
         height: rem(70);
       }
     }
+
     .num {
       font-size: 3em;
     }
@@ -643,6 +804,7 @@ section {
     .countItem {
       justify-content: flex-start;
     }
+
     .txt {
       text-align: start;
       margin-top: 1rem;
@@ -652,30 +814,37 @@ section {
     //   margin-bottom: 2rem;
     // }
   }
+
   @include screen('mobile') {
     .countItem {
       justify-content: center;
     }
+
     .txt {
       text-align: center;
     }
+
     .num {
       min-width: 10rem;
       justify-content: flex-start;
     }
+
     .flexSet {
       margin: 2rem 0;
     }
   }
 }
+
 .linkList {
   background: #000;
+
   ul {
     display: flex;
     justify-content: center;
     list-style: none;
     margin: 0;
     padding: 52px 0;
+
     li {
       flex: 0 1 10%;
       text-align: center;
@@ -686,13 +855,16 @@ section {
       &:last-child {
         border-right: 0;
       }
+
       a {
         color: #fff;
+
         &:hover {
           color: $colorPrimary;
         }
       }
     }
+
     @include screen('tablet') {
       li {
         flex: 0 1 20%;
@@ -703,6 +875,7 @@ section {
     }
   }
 }
+
 .newsSlider,
 .eventSlider {
   .swiperBox {
@@ -710,30 +883,54 @@ section {
       max-width: rem(1128);
     }
   }
+
+  .swiper-slide {
+    & > a {
+      display: block;
+
+      &:focus-visible {
+        display: block;
+        outline: $colorPrimary 2px solid;
+        outline-offset: -2px;
+        isolation: isolate;
+        opacity: 1 !important;
+
+        .pic {
+          z-index: -1;
+        }
+      }
+    }
+  }
+
   .swiperArrow {
     top: 65%;
+
     @include screen('tablet') {
       top: 70%;
     }
   }
+
   .pic {
     margin: 0 1.25rem;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     background: #fff;
     height: rem(236);
     display: flex;
+
     img {
       width: 100%;
       object-fit: cover;
       // object-fit: contain;
     }
   }
+
   .sliderTag {
     position: absolute;
     top: 200px;
     display: flex;
     font-family: 'DM Serif Display';
   }
+
   .date {
     background: $colorPrimary;
     display: inline-block;
@@ -747,29 +944,34 @@ section {
     align-items: center;
     font-size: 1.25em;
     line-height: 1.25em;
+
     .year {
       display: block;
       text-align: center;
       font-size: 0.9em;
     }
   }
+
   .title {
     margin: 3.75em 1.25rem 1em 1.25rem;
     padding-bottom: 1em;
     color: $colorDark;
     font-size: 1.25em;
     border-bottom: 3px solid #232222;
+
     span {
       @include textLine(2, 1.5em);
       font-weight: 400;
     }
   }
+
   .txt {
     margin: 0 1.25rem;
     color: $colorDark;
 
     @include textLine(3, 2rem);
   }
+
   .hot {
     background: $colorLight;
     width: rem(98);
@@ -782,43 +984,70 @@ section {
     letter-spacing: 0.1rem;
     font-size: 1.25em;
   }
+
   a {
     color: #000;
   }
+
   .swiperBox {
     margin-bottom: 10em;
   }
+
   @include screen('tablet') {
     .container {
       padding: 0;
     }
+
     .sliderTag {
       left: rem(15);
     }
   }
 }
+
 .winnerSlider {
   .container {
     padding: 0;
   }
+
   .swiper {
     margin-bottom: rem(108);
     max-width: 70.5rem;
   }
+
   .swiper-slide {
     // margin-bottom: 3.75rem;
     margin-bottom: 6rem;
+
+    & > a {
+      display: block;
+
+      &:focus-visible {
+        display: block;
+        outline: $colorPrimary 2px solid;
+        outline-offset: -2px;
+        isolation: isolate;
+        opacity: 1 !important;
+
+        .pic {
+          z-index: -1;
+        }
+      }
+    }
+
     .pic {
       // height: rem(326);
       height: rem(280);
       overflow: hidden;
+
       img {
         object-fit: cover;
         margin: 0 auto;
         width: 100%;
         height: 100%;
       }
+
       position: relative;
+
       &::before {
         width: 100%;
         height: 100%;
@@ -826,6 +1055,7 @@ section {
         position: absolute;
         content: '';
       }
+
       &::after {
         width: 100%;
         height: 7px;
@@ -835,6 +1065,7 @@ section {
         bottom: 0px;
       }
     }
+
     .title {
       font-size: 1.75em;
       font-weight: 400;
@@ -842,9 +1073,11 @@ section {
       line-height: 1.15em;
       margin-bottom: 0.75rem;
     }
+
     .subtitle {
       color: #909090;
     }
+
     .sticker {
       height: rem(135);
       width: rem(135);
@@ -860,6 +1093,7 @@ section {
       line-height: 1.5em;
       text-align: center;
       font-size: 1em;
+
       span {
         display: block;
         font-size: 1.25em;
@@ -869,35 +1103,44 @@ section {
         height: rem(130);
         width: rem(130);
         left: -40px;
+
         span {
           font-size: 1.15em;
         }
       }
+
       @include screen('mobile') {
         height: rem(120);
         width: rem(120);
         left: 10px;
+
         span {
           font-size: 1em;
         }
       }
     }
+
     &.swiper-slide-active {
       .subtitle {
         color: #302a20;
       }
+
       .title {
         color: #302a20;
       }
+
       .pic {
         box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
         &::before {
           background: rgba(0, 0, 0, 0);
         }
+
         &::after {
           background-color: $colorPrimary;
         }
       }
+
       .sticker {
         display: flex;
       }
@@ -905,21 +1148,25 @@ section {
   }
 
   .swiper-scrollbar {
-    background: #232222 !important  ;
+    background: #232222 !important;
     max-width: 60%;
     left: 20% !important;
   }
+
   .swiperArrow {
     top: 60%;
   }
+
   .swiper-scrollbar-drag {
     background-color: $colorPrimary !important;
   }
+
   @media screen and (max-width: 1200px) {
     .swiperBox {
       margin: 0 1rem;
     }
   }
+
   @include screen('tablet') {
     .swiper-slide {
       .title {
@@ -927,14 +1174,17 @@ section {
       }
     }
   }
+
   @include screen('mobile') {
     .swiper-slide {
       a {
         padding: 0 3em;
         display: block;
       }
+
       .sticker {
         line-height: 1.5em;
+
         span {
           font-size: 1.15em;
         }
@@ -942,30 +1192,50 @@ section {
     }
   }
 }
+
 .activitiesSection {
   background: url(../images/activitie_bg.jpg) no-repeat;
   background-size: cover;
   min-height: rem(757);
+
   .container {
     padding: 0;
   }
+
   .activitiesSwiper {
     padding: 0 1rem;
     padding-bottom: 7rem;
+
     .swiper {
       max-width: 70.5rem;
     }
 
     .swiper-slide {
+      & > a {
+
+        &:focus-visible {
+          outline: $colorPrimary 2px solid;
+          outline-offset: -2px;
+          isolation: isolate;
+          opacity: 1 !important;
+
+          .pic {
+            z-index: -1;
+          }
+        }
+      }
+
       .pic {
         height: rem(400);
         width: 100%;
         position: relative;
+
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
+
         &::before {
           position: absolute;
           content: '';
@@ -974,12 +1244,15 @@ section {
           background: rgba(0, 0, 0, 0.4);
         }
       }
+
       > a {
         display: flex;
+
         @include screen('mobile') {
           display: block;
         }
       }
+
       .info {
         display: none;
         padding: 6% 2% 16% 3%;
@@ -988,28 +1261,34 @@ section {
         align-items: center;
         color: #000;
       }
+
       .more {
         display: none;
         position: absolute;
         bottom: 13%;
         right: 27%;
+
         span {
           display: block;
         }
       }
+
       .title {
         font-size: 1.5em;
         font-weight: 400;
         margin: 0;
+
         span {
           display: block;
           margin-top: 0.75rem;
         }
       }
+
       .date {
         font-family: 'DM Serif Display';
         text-align: center;
         font-size: 2.5em;
+
         .year {
           margin-top: 0.6rem;
           font-size: 1rem;
@@ -1017,20 +1296,26 @@ section {
         }
       }
     }
+
     .swiper-slide-prev {
       right: 3%;
     }
+
     .swiper-slide-next {
       left: 3%;
     }
+
     .swiper-slide-active {
       .pic {
         box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
         &::before {
           display: none;
         }
       }
+
       position: relative;
+
       .more {
         display: block;
         width: rem(112);
@@ -1060,9 +1345,11 @@ section {
           top: 80px;
           background-color: $colorPrimary;
         }
+
         &:hover {
           border-color: $colorPrimary;
           color: #fff;
+
           &::after {
             opacity: 1;
             top: 0px;
@@ -1070,22 +1357,28 @@ section {
           }
         }
       }
+
       .info {
         display: flex;
       }
+
       @media screen and (max-width: 1024px) {
         .more {
           bottom: 0;
         }
       }
+
       @include screen('tablet') {
         width: 100% !important;
+
         .info {
           width: 80%;
         }
       }
+
       @include screen('mobile') {
         margin-bottom: 1rem;
+
         .info {
           min-height: rem(230);
           width: 100%;
@@ -1103,6 +1396,7 @@ section {
       }
     }
   }
+
   .swiperArrow {
     top: 60%;
   }
@@ -1112,10 +1406,12 @@ section {
       padding: 0 15px 0 0;
     }
   }
+
   @include screen('mobile') {
     .container {
       padding: 0 15px 0 15px;
     }
+
     .activitiesSwiper {
       .swiper-slide {
         .title {
@@ -1132,38 +1428,48 @@ footer {
     flex-wrap: wrap;
     padding: 0;
   }
+
   .navContainer {
     display: flex;
     justify-content: center;
     padding: 4em 1em;
     width: 100%;
   }
+
   nav {
     width: 100%;
     max-width: rem(1260);
+
     > ul {
       display: flex;
+
       @include screen('tablet') {
         flex-wrap: wrap;
       }
     }
   }
+
   .video {
     margin-right: 1rem;
+
     ul {
       display: flex;
+
       li {
         display: grid;
         margin-right: 10px;
+
         img {
           border-radius: 0.25rem;
         }
       }
     }
   }
+
   ul {
     @include liReset;
   }
+
   .title {
     color: #000;
     font-weight: 600;
@@ -1171,48 +1477,58 @@ footer {
     margin-bottom: 1em;
     display: block;
   }
+
   .link {
     margin: 0 5rem 0 1rem;
 
     li {
       margin-bottom: 1rem;
+
       a {
         font-size: 1rem;
         color: #000;
       }
     }
   }
+
   .map {
     margin-left: auto;
     margin-right: 2rem;
   }
+
   @media screen and (max-width: 1280px) {
     .link {
       margin: 0 2rem 0 1rem;
     }
   }
+
   @include screen('tablet') {
     .navContainer {
       margin-left: 1em;
       padding: 3em 0;
     }
+
     .link {
       margin: 0 1rem;
       width: 100%;
       text-align: start;
     }
+
     .map {
       margin: 0 1em;
     }
+
     .video {
       margin: 0 1em;
     }
   }
+
   @include screen('mobile') {
     .link {
       text-align: start;
       margin-right: 1rem;
     }
+
     .map {
       iframe {
         width: 200px;
@@ -1220,63 +1536,79 @@ footer {
       }
     }
   }
+
   @include screen('xsMobile') {
     nav > ul {
       display: block;
     }
+
     .video {
       margin: 1rem;
+
       ul {
         display: block;
+
         li {
           margin-left: 0;
         }
       }
+
       iframe {
         width: 100%;
         height: 200px;
       }
     }
+
     .map {
       margin: 1rem;
+
       iframe {
         width: 100%;
       }
     }
   }
 }
+
 .organizerSection {
   background: #eee;
   width: 100%;
   display: flex;
   padding-bottom: 0;
+
   .container {
     width: 100%;
+
     > ul {
       width: 100%;
       @include liReset;
       display: flex;
       align-items: center;
       padding: 1.5rem 0;
+
       > li {
         flex: 0 1 31%;
         margin: 0 1rem;
         font-weight: 600;
+
         &:nth-child(3) {
           flex: 0 1 38%;
         }
+
         div {
           display: flex;
           align-items: center;
         }
+
         .title {
           margin-right: 1.75em;
           white-space: nowrap;
           margin-bottom: 0;
         }
+
         ul {
           @include liReset;
           display: flex;
+
           li {
             @include liReset;
             margin: 0 0.25em;
@@ -1285,11 +1617,14 @@ footer {
       }
     }
   }
+
   @include screen('tablet') {
     .container > ul {
       display: block;
+
       li {
         margin-bottom: 1.25rem;
+
         &:last-child {
           margin-bottom: 0;
         }

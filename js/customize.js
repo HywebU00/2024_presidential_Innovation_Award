@@ -1,7 +1,6 @@
 // -----  基本功能開關   ---------------------------------------------------
 
 window.addEventListener('load', () => {
-  // topNav(); // 手機版顯示nav選單
   navSticky(); // 捲動時固定主選單
   xSlider('.language button', '.language ul'); //語系
   // fontSize(); // 全站字體
@@ -76,6 +75,7 @@ window.addEventListener('load', () => {
   mpSliderItem.forEach((item, index) => {
     mpSliderPagination.push(item.dataset.title);
   });
+
   const mpSlider = new Swiper('.mpSlider .swiper', {
     slidesPerView: 1,
     loop: false,
@@ -83,11 +83,6 @@ window.addEventListener('load', () => {
     spaceBetween: 0,
     autoplay: {
       delay: 5000,
-    },
-    navigation: {
-      nextEl: '.winnerSlider .nextSlider', //自行設定樣式
-      prevEl: '.winnerSlider .prevSlider', //自行設定樣式
-      disabledClass: '.winnerSlider swiperArrow-disabled', //不可點選樣式
     },
     // 切換點
     pagination: {
@@ -119,6 +114,33 @@ window.addEventListener('load', () => {
       },
     },
   });
+
+  const mpSwiperLength = document.querySelectorAll('.mpSlider .swiper-slide').length;
+
+  if (mpSwiperLength > 1) {
+    const controlBox = document.querySelector('.mpSlider .controlBox');
+    const mpControlPlay = document.querySelector('.mpSlider .controlBox .play');
+    const mpControlPause = document.querySelector('.mpSlider .controlBox .stop');
+    controlBox.classList.add('active');
+    mpControlPlay.setAttribute('aria-pressed', 'true');
+
+    mpControlPlay?.addEventListener('click', () => {
+      mpSlider.autoplay.start();
+      mpControlPlay.classList.add('active');
+      mpControlPause.classList.remove('active');
+
+      mpControlPlay.setAttribute('aria-pressed', 'true');
+      mpControlPause.setAttribute('aria-pressed', 'false');
+    });
+    mpControlPause?.addEventListener('click', () => {
+      mpSlider.autoplay.stop();
+      mpControlPause.classList.add('active');
+      mpControlPlay.classList.remove('active');
+
+      mpControlPlay.setAttribute('aria-pressed', 'false');
+      mpControlPause.setAttribute('aria-pressed', 'true');
+    });
+  }
 
   //產業大圖輪播
   let industrySliderItem = document.querySelectorAll('.industrySlider .swiper-slide');
@@ -164,6 +186,33 @@ window.addEventListener('load', () => {
       },
     },
   });
+
+  const industrySliderLength = document.querySelectorAll('.industrySlider .swiper-slide').length;
+
+  if (industrySliderLength > 1) {
+    const controlBox = document.querySelector('.industrySlider .controlBox');
+    const mpControlPlay = document.querySelector('.industrySlider .controlBox .play');
+    const mpControlPause = document.querySelector('.industrySlider .controlBox .stop');
+    controlBox.classList.add('active');
+    mpControlPlay.setAttribute('aria-pressed', 'true');
+
+    mpControlPlay?.addEventListener('click', () => {
+      industrySlider.autoplay.start();
+      mpControlPlay.classList.add('active');
+      mpControlPause.classList.remove('active');
+
+      mpControlPlay.setAttribute('aria-pressed', 'true');
+      mpControlPause.setAttribute('aria-pressed', 'false');
+    });
+    mpControlPause?.addEventListener('click', () => {
+      industrySlider.autoplay.stop();
+      mpControlPause.classList.add('active');
+      mpControlPlay.classList.remove('active');
+
+      mpControlPlay.setAttribute('aria-pressed', 'false');
+      mpControlPause.setAttribute('aria-pressed', 'true');
+    });
+  }
 
   //消息輪播
   const newsSwiper = new Swiper('.newsSlider .swiper', {
@@ -240,7 +289,8 @@ window.addEventListener('load', () => {
   const winnerSwiper = new Swiper('.winnerSlider .swiper', {
     slidesPerView: 1,
     spaceBetween: 70,
-    loop: winnerSlideLen <= 1 ? false : true,
+    // loop: winnerSlideLen <= 1 ? false : true,
+    loop: false,
     centeredSlides: true,
     // 切換點
     pagination: {
