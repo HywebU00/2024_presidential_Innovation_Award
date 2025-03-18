@@ -3,7 +3,7 @@
 
 //---------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$colorPrimary: #51c2bb; //#00a4f9; //主色
+$colorPrimary: #2D807B; //#00a4f9; //主色 #51c2bb
 $colorSecondary: #781f79; //輔色
 $colorLight: #f29027; // #fec003; //點綴
 $colorLink: #51c2bb; //#00a4f9; //連結
@@ -21,7 +21,7 @@ $colorHr: #666; //hr顏色
 $colorWord: #222; //一般字的顏色
 $btnWordColor: #222; //按鈕字的顏色
 // 連結顏色
-$aColor: #51c2bb; //#00a4f9;
+$aColor: #01837B; //#00a4f9; //#51c2bb
 $aHover: mix($aColor, #000, 90%);
 $aFocus: mix($aColor, #fff, 90%);
 // 表單focus顏色

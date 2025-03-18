@@ -58,9 +58,11 @@
   min-height: rem(70);
   box-sizing: border-box;
   border-bottom: #333 solid 3px;
+
   &:hover {
     border-bottom: $colorPrimary solid 3px;
   }
+
   .searchBtn {
     text-indent: -9999px;
     color: transparent;
@@ -73,6 +75,7 @@
     margin: 0;
     border: none;
     z-index: 90;
+
     &:before {
       content: '';
       width: 100%;
@@ -113,14 +116,17 @@
     margin-top: -3.75rem !important;
     border: 0;
     min-height: unset;
+
     .inputBox {
       width: 100%;
       left: 0;
     }
+
     .searchBtn {
       height: rem(60);
       width: rem(60);
       padding: rem(15);
+
       &::before {
         width: 40%;
         top: rem(16);
@@ -186,9 +192,9 @@
         padding: 0.2em 0.8em;
       }
 
-      &:focus-visible {
-        box-shadow: 0 0px 0px 2px $aFocus;
-      }
+      // &:focus-visible {
+      //   box-shadow: 0 0px 0px 2px $aFocus;
+      // }
     }
 
     button,
@@ -202,6 +208,7 @@
       &:focus-visible {
         box-shadow: none;
       }
+
       @include screen('mobile') {
         margin-right: 0.25rem;
       }

@@ -1,17 +1,17 @@
 // .mp_niia
-.mobileSidebar .mobileArea {
+// .mobileSidebar .mobileArea {
 
-  a,
-  button {
-    &:focus-visible {
-      outline: lighten($aHover, 20) 2px solid;
-    }
-  }
-}
+//   a,
+//   button {
+//     &:focus-visible {
+//       outline: lighten($aHover, 20) 2px solid;
+//     }
+//   }
+// }
 
-.mobileSidebar button.sidebarClose:focus-visible {
-  outline: lighten($aHover, 20) 2px solid;
-}
+// .mobileSidebar button.sidebarClose:focus-visible {
+//   outline: lighten($aHover, 20) 2px solid;
+// }
 
 .industrySlider {
   margin-top: rem(60);
@@ -60,8 +60,8 @@
     border-radius: 0 !important;
 
     &:focus-visible {
-      outline: lighten($aHover, 20) 2px solid;
-      outline-offset: -2px;
+      // outline: lighten($aHover, 20) 3px solid;
+      // outline-offset: -3px;
       opacity: 1 !important;
     }
   }
@@ -71,8 +71,8 @@
 
     &:focus-visible {
       display: block;
-      outline: lighten($aHover, 20) 2px solid;
-      outline-offset: -2px;
+      // outline: lighten($aHover, 20) 3px solid;
+      // outline-offset: -3px;
       isolation: isolate;
       opacity: 1 !important;
 
@@ -307,8 +307,8 @@
 
       &:focus-visible {
         display: block;
-        outline: $colorPrimary 2px solid;
-        outline-offset: -2px;
+        // outline: $colorPrimary 3px solid;
+        // outline-offset: -3px;
         isolation: isolate;
         opacity: 1 !important;
 
@@ -429,8 +429,8 @@
 
       &:focus-visible {
         display: block;
-        outline: $colorPrimary 2px solid;
-        outline-offset: -2px;
+        // outline: $colorPrimary 3px solid;
+        // outline-offset: -3px;
         isolation: isolate;
         opacity: 1 !important;
 
@@ -513,8 +513,8 @@
       & > a {
 
         &:focus-visible {
-          outline: $colorPrimary 2px solid;
-          outline-offset: -2px;
+          // outline: $colorPrimary 3px solid;
+          // outline-offset: -3px;
           isolation: isolate;
           opacity: 1 !important;
 

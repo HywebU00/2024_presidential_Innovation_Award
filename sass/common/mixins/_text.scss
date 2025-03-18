@@ -41,15 +41,15 @@
   text-decoration: $line;
   color: $color;
 
-  &:hover,
-  &:focus-visible {
+  // &:focus-visible,
+  &:hover {
     color: $aHover;
     cursor: pointer;
   }
 
   &:focus-visible {
-    outline: $aHover 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
 }
 

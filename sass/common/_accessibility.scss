@@ -1,12 +1,29 @@
 // 以下皆是設定 測試無障礙關閉js 的純css排版
 
 // tab的外框線
-a:focus-visible {
-  outline: $aFocus 2px solid;
+a,
+button,
+input,
+select,
+textarea {
+  &:focus-visible {
+    isolation: isolate;
+    outline: 3px solid red;
+    outline-offset: -3px;
+    opacity: 1 !important;
 
-  // box-shadow: 0 0px 0px 2px $aFocus inset;
-  @include screen('mobile') {
-    box-shadow: none;
+    // box-shadow: 0 0px 0px 2px $aFocus inset;
+    // @include screen('mobile') {
+    //   box-shadow: none;
+    // }
+    .pic {
+      z-index: -2;
+    }
+
+    img,
+    .title {
+      z-index: -1;
+    }
   }
 }
 

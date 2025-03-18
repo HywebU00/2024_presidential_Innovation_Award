@@ -7,6 +7,7 @@
     border-radius: 0.25rem 0.25rem 0 0;
     font-weight: 400;
     background: $colorPrimary;
+    // background-color: #389F98;
     padding: 1rem 0.5rem;
     margin: 0;
   }
@@ -43,6 +44,7 @@
           color: #222;
           font-weight: bold;
           font-size: rem(18);
+
           &.active,
           &:hover {
             background: mix(#9e9e9e, #ffff, 75%);
@@ -80,8 +82,10 @@
     }
   }
 }
+
 .leftBlock.memberLeftBlock {
   transition: all 0.5s;
+
   @include screen('tablet') {
     display: block;
     position: fixed;
@@ -90,24 +94,29 @@
     z-index: 999;
     left: -260px;
   }
+
   @include screen('mobile') {
     top: 70px;
   }
+
   .title {
     align-items: center;
     font-size: 1.25rem;
     display: flex;
     justify-content: center;
+
     @include screen('tablet') {
       border-radius: 0.25rem 0 0 0;
     }
   }
+
   .user {
     text-align: center;
     font-size: 1rem;
     padding: 0.5em 0;
     background-color: #f2f2f2;
   }
+
   .handle {
     font-size: 0;
     position: absolute;
@@ -121,14 +130,17 @@
     top: 0;
     display: none;
     cursor: pointer;
+
     @include screen('tablet') {
       display: block;
     }
   }
+
   &.open {
     left: 16px;
     transition: all 0.5s;
   }
+
   .accordion {
     ul {
       li {
@@ -140,14 +152,17 @@
     }
   }
 }
+
 .np {
   .submenu {
     margin-bottom: rem(60);
   }
 }
+
 .kv {
   height: rem(195);
   overflow: hidden;
+
   img {
     width: 100%;
     height: 100%;

@@ -59,8 +59,8 @@
         text-align: left;
 
         &:focus-visible {
-          outline: lighten($aHover, 20) 2px solid;
-          outline-offset: -2px;
+          outline: lighten($aHover, 20) 3px solid;
+          outline-offset: -3px;
         }
       }
 
@@ -291,8 +291,8 @@
 
     &:focus-visible {
       display: block;
-      outline: $colorPrimary 2px solid;
-      outline-offset: -2px;
+      outline: $colorPrimary 3px solid;
+      outline-offset: -3px;
       isolation: isolate;
       opacity: 1 !important;
     }

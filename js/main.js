@@ -295,16 +295,18 @@ function xSlider(elem, con) {
       const checkDisplay = window.getComputedStyle(targetSelectCon).display;
       if (e.code === 'Escape' && checkDisplay === 'block') {
         jsSlideUp(targetSelectCon);
+        i.setAttribute('aria-expanded', 'false');
+        targetSelectCon.setAttribute('aria-hidden', 'true');
+        i.focus();
       }
     });
-  });
 
-  // clickOtherPlace;
-  window.addEventListener('click', (e) => {
-    targetSelect.forEach((i) => {
-      const targetSelectCon = i.parentNode.querySelector(con);
+    // clickOtherPlace;
+    window.addEventListener('click', (e) => {
       if (e.target !== i) {
         jsSlideUp(targetSelectCon);
+        i.setAttribute('aria-expanded', 'false');
+        targetSelectCon.setAttribute('aria-hidden', 'true');
       }
     });
   });
@@ -833,6 +835,9 @@ function mainMenuSetup() {
     const checkDisplay = window.getComputedStyle(sidebar).display;
     if (e.code === 'Escape' && checkDisplay === 'block') {
       hideSidebar();
+      sidebarCtrlBtn.setAttribute('aria-expanded', 'false');
+      sidebar.setAttribute('aria-hidden', 'true');
+      sidebarCtrlBtn.focus();
     }
   });
 
@@ -1586,6 +1591,8 @@ function webSearchBtnFunction() {
     if (e.code === 'Escape' && checkDisplay === 'block') {
       jsSlideUp(content);
       jsFadeOut(menuOverlay);
+      content.setAttribute('aria-hidden', 'true');
+      el.setAttribute('aria-expanded', 'false');
       el.focus();
     }
   });
@@ -1730,8 +1737,13 @@ function a11yKeyCode() {
     switch (e.altKey && e.code) {
       // alt+S 查詢
       case true && 'KeyS':
-        scrollAnime(0, search);
-        focusElem(0, search);
+        const searchBox = document.querySelector('.webSearch');
+        jsSlideDown(searchBox.querySelector('.inputBox'), 300);
+        searchBox.querySelector('.searchBtn').setAttribute('aria-expanded', 'true');
+        searchBox.querySelector('.inputBox').setAttribute('aria-hidden', 'false');
+        searchBox.querySelector('input[type="text"]').focus();
+        // scrollAnime(0, search);
+        // focusElem(0, search);
         break;
       // alt+U header
       case true && 'KeyU':

@@ -9,6 +9,8 @@
   padding-left: 46px;
   color: #fff;
   background-color: $colorPrimary;
+  // background-color: #01847B;
+
   &:hover {
     background-image: url('../images/icon/icon_search.svg');
     background-position: 20px 12px;
@@ -16,24 +18,30 @@
     background-size: 16px;
   }
 }
+
 .conditional_searchblock {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
   margin-top: 0.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
   display: none;
+
   .formTitle {
     font-weight: 500;
   }
+
   .formGrid {
     border-top: none;
   }
+
   .flex_6_6 {
     display: flex;
     flex-wrap: wrap;
+
     .formGrp {
       width: 50%;
     }
+
     @include screen('mobile') {
       .formGrp {
         width: 100%;
@@ -41,29 +49,37 @@
     }
   }
 }
+
 .cjkList {
   li {
     list-style-type: cjk-ideographic;
   }
 }
+
 .lp table {
   margin-bottom: 2em;
+
   td {
     &.num {
       text-align: end;
     }
+
     &.type {
       text-align: center;
       color: #666;
     }
+
     .fileDownload {
       padding-left: 0;
       margin-bottom: 0;
+
       li {
         padding-left: 0;
+
         &::before {
           display: none;
         }
+
         span {
           a {
             margin: 0.1em;
@@ -80,19 +96,24 @@
     .flexSet {
       justify-content: flex-start;
     }
+
     .title + p {
       margin-top: 3.75em;
+
       @include screen('mobile') {
         margin-top: 2.75em;
       }
     }
+
     p {
       margin-top: 0.75em;
       @include textLine(2, 25px);
       color: #555;
       font-weight: bold;
     }
+
     a {
+
       .name,
       .type,
       time {
@@ -101,6 +122,7 @@
         @include textLine(1, 25px);
       }
     }
+
     .thumbnail {
       .title {
         width: rem(92);
@@ -119,6 +141,7 @@
         text-align: center;
         font-weight: 400;
         font-size: 0.95em;
+
         @media screen and (max-width: '1280px') {
           bottom: 45%;
         }
@@ -126,18 +149,21 @@
         @include screen('mobile') {
           bottom: 40%;
         }
+
         @include screen('xsMobile') {
           bottom: 30%;
           width: rem(100);
           height: rem(100);
         }
       }
+
       .imgContainer {
         img {
           object-fit: contain;
           transition: all 0.3s;
         }
       }
+
       &:hover,
       &:focus {
         a {
@@ -151,6 +177,7 @@
       }
     }
   }
+
   .videoList {
     .flexSet {
       justify-content: flex-start;
@@ -159,15 +186,18 @@
     .title {
       @include textLine(2, 1.5em);
     }
+
     time {
       font-size: 0.8em;
       line-height: 1.25em;
     }
+
     a {
       .imgContainer {
         img {
           transition: all 0.3s;
         }
+
         &::before {
           content: '';
           position: absolute;
@@ -180,6 +210,7 @@
           opacity: 1;
         }
       }
+
       &:hover,
       &:focus {
         .imgContainer {
@@ -187,6 +218,7 @@
             transform: scale(1.1);
             transition: all 0.3s;
           }
+
           &::before {
             transition: all 0.3s;
             opacity: 0;
@@ -195,8 +227,10 @@
       }
     }
   }
+
   .thumbnail {
     position: relative;
+
     &::after {
       content: '';
       position: absolute;
@@ -206,46 +240,56 @@
       background: black;
       bottom: 0;
     }
+
     flex-basis: calc(100% / 4 - 12px);
     max-width: calc(100% / 4 - 12px);
     margin: 12px 6px;
+
     @include screen('tablet') {
       flex-basis: calc(100% / 3 - 12px);
       max-width: calc(100% / 3 - 12px);
     }
+
     @include screen('mobile') {
       flex-basis: calc(100% / 2 - 12px);
       max-width: calc(100% / 2 - 12px);
     }
+
     @include screen('xsMobile') {
       flex-basis: calc(100% - 12px);
       max-width: calc(100% - 12px);
     }
   }
+
   .accordion {
     .accordionTable {
       overflow-x: scroll;
     }
+
     table {
       ul {
         padding-left: rem(40);
         list-style: disc;
       }
     }
+
     .aList {
       margin: 1em 0;
+
       a {
         margin-right: 0 0.5em;
         text-decoration: underline;
       }
     }
   }
+
   .questionAccordion {
     .accordionArrow {
       &:after {
         border-color: #000;
       }
     }
+
     ul {
       li {
         .accordionList {

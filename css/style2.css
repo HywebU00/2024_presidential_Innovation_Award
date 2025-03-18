@@ -1937,13 +1937,34 @@ img {
       clear: both;
     }
   }
-  a:focus-visible {
-    outline: #ae875f 2px solid;
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    isolation: isolate;
+    outline: 3px solid red;
+    outline-offset: -3px;
+    opacity: 1 !important;
   }
-  @media screen and (max-width: 767px) {
-    a:focus-visible {
-      box-shadow: none;
-    }
+  a:focus-visible .pic,
+  button:focus-visible .pic,
+  input:focus-visible .pic,
+  select:focus-visible .pic,
+  textarea:focus-visible .pic {
+    z-index: -2;
+  }
+  a:focus-visible img,
+  a:focus-visible .title,
+  button:focus-visible img,
+  button:focus-visible .title,
+  input:focus-visible img,
+  input:focus-visible .title,
+  select:focus-visible img,
+  select:focus-visible .title,
+  textarea:focus-visible img,
+  textarea:focus-visible .title {
+    z-index: -1;
   }
   .accessKey {
     position: absolute;
@@ -2127,13 +2148,13 @@ img {
     text-decoration: none;
     color: #a57a4d;
   }
-  a:hover, a:focus-visible {
+  a:hover {
     color: #956e45;
     cursor: pointer;
   }
   a:focus-visible {
-    outline: #956e45 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   kbd {
     background: #fff;
@@ -2531,9 +2552,6 @@ img {
     min-width: auto;
     padding: 0.2em 0.8em;
   }
-  .webSearch .formGrp input:focus-visible {
-    box-shadow: 0 0px 0px 2px #ae875f;
-  }
   .webSearch .formGrp button,
   .webSearch .formGrp .btn,
   .webSearch .formGrp .btnSearch {
@@ -2841,18 +2859,15 @@ img {
     outline: none;
   }
   .btn:focus-visible {
-    background: #c7c7c7;
-    border: 1px solid #adadad;
     cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #ae875f;
+    outline: 3px red solid;
+    outline-offset: -3px;
   }
   .btn.active {
     background: #ededed;
     cursor: pointer;
   }
-  .btn:hover, .btn:focus-visible {
+  .btn:hover {
     color: #222;
     outline: none;
   }
@@ -2869,12 +2884,9 @@ img {
     outline: none;
   }
   .btnGreen:focus-visible {
-    background: #1d601d;
-    border: 1px solid #113911;
     cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #ae875f;
+    outline: 3px red solid;
+    outline-offset: -3px;
   }
   .btnGreen.active {
     background: #2f9b2f;
@@ -2893,12 +2905,9 @@ img {
     outline: none;
   }
   .btnBlue:focus-visible {
-    background: #004d99;
-    border: 1px solid #003366;
     cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #ae875f;
+    outline: 3px red solid;
+    outline-offset: -3px;
   }
   .btnBlue.active {
     background: #0073e6;
@@ -2917,12 +2926,9 @@ img {
     outline: none;
   }
   .btnYellow:focus-visible {
-    background: #e7ae01;
-    border: 1px solid #b48801;
     cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #ae875f;
+    outline: 3px red solid;
+    outline-offset: -3px;
   }
   .btnYellow.active {
     background: #fecd36;
@@ -2941,12 +2947,9 @@ img {
     outline: none;
   }
   .btnOrange:focus-visible {
-    background: #9d3400;
-    border: 1px solid #6a2300;
     cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #ae875f;
+    outline: 3px red solid;
+    outline-offset: -3px;
   }
   .btnOrange.active {
     background: #ea4d00;
@@ -2965,12 +2968,9 @@ img {
     outline: none;
   }
   .btnRed:focus-visible {
-    background: #a00000;
-    border: 1px solid #6d0000;
     cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #ae875f;
+    outline: 3px red solid;
+    outline-offset: -3px;
   }
   .btnRed.active {
     background: #ed0000;
@@ -2989,12 +2989,9 @@ img {
     outline: none;
   }
   .btnPurple:focus-visible {
-    background: #641a65;
-    border: 1px solid #3c0f3c;
     cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #ae875f;
+    outline: 3px red solid;
+    outline-offset: -3px;
   }
   .btnPurple.active {
     background: #a029a2;
@@ -3013,12 +3010,9 @@ img {
     outline: none;
   }
   .btnSubmit:focus-visible {
-    background: #62492e;
-    border: 1px solid #3f2f1e;
     cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #ae875f;
+    outline: 3px red solid;
+    outline-offset: -3px;
   }
   .btnSubmit.active {
     background: #967046;
@@ -3040,12 +3034,9 @@ img {
     outline: none;
   }
   .btnSearch:focus-visible {
-    background: #62492e;
-    border: 1px solid #3f2f1e;
     cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #ae875f;
+    outline: 3px red solid;
+    outline-offset: -3px;
   }
   .btnSearch.active {
     background: #967046;
@@ -3135,13 +3126,13 @@ img {
     text-decoration: none;
     color: #222;
   }
-  .breadcrumb a:hover, .breadcrumb a:focus-visible {
+  .breadcrumb a:hover {
     color: #956e45;
     cursor: pointer;
   }
   .breadcrumb a:focus-visible {
-    outline: #956e45 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   .divider,
   .dividerVertical {
@@ -3867,13 +3858,13 @@ img {
     border: 1px solid #ddd;
     padding: 0.2em 0.75em;
   }
-  .tag ul li a:hover, .tag ul li a:focus-visible {
+  .tag ul li a:hover {
     color: #956e45;
     cursor: pointer;
   }
   .tag ul li a:focus-visible {
-    outline: #956e45 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   .scrollToTop {
     width: 50px;
@@ -3903,13 +3894,13 @@ img {
     text-decoration: none;
     color: #a57a4d;
   }
-  em[tooltip]:hover, em[tooltip]:focus-visible {
+  em[tooltip]:hover {
     color: #956e45;
     cursor: pointer;
   }
   em[tooltip]:focus-visible {
-    outline: #956e45 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   [tooltip]:before,
   [tooltip]:after {
@@ -4249,13 +4240,13 @@ img {
     text-decoration: none;
     color: #222;
   }
-  .header .navigation .navList li a:hover, .header .navigation .navList li a:focus-visible {
+  .header .navigation .navList li a:hover {
     color: #956e45;
     cursor: pointer;
   }
   .header .navigation .navList li a:focus-visible {
-    outline: #956e45 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   .header .navigation .submenuBox {
     display: flex;
@@ -4876,13 +4867,13 @@ img {
     padding: 0.5em 0;
     background: none;
   }
-  .fatFooter nav ul li ul li a:hover, .fatFooter nav ul li ul li a:focus-visible {
+  .fatFooter nav ul li ul li a:hover {
     color: #956e45;
     cursor: pointer;
   }
   .fatFooter nav ul li ul li a:focus-visible {
-    outline: #956e45 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   @media screen and (max-width: 575px) {
     .fatFooter nav ul li ul li a {
@@ -6032,19 +6023,8 @@ img {
   input[type=password]:focus-visible,
   textarea:focus-visible,
   select:focus-visible {
-    box-shadow: 0px 0px 0px 2px #b3885d;
-    outline: none;
-  }
-  button:focus,
-  input[type=text]:focus,
-  input[type=reset]:focus,
-  input[type=file]:focus,
-  input[type=tel]:focus,
-  input[type=email]:focus,
-  input[type=password]:focus,
-  textarea:focus,
-  select:focus {
-    outline: none;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   select {
     line-height: 1.35em;
@@ -6126,12 +6106,9 @@ img {
     outline: none;
   }
   .uploadGrp .uploadBtn:focus-visible {
-    background: #513c26;
-    border: 1px solid #2e2216;
     cursor: pointer;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 0px 0px 2px #ae875f;
+    outline: 3px red solid;
+    outline-offset: -3px;
   }
   .uploadGrp .uploadBtn.active {
     background: #85623e;
@@ -6441,13 +6418,13 @@ img {
     text-decoration: none;
     color: #222;
   }
-  .lp table td a:hover, .lp table td a:focus-visible {
+  .lp table td a:hover {
     color: #956e45;
     cursor: pointer;
   }
   .lp table td a:focus-visible {
-    outline: #956e45 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   .lp table td.date {
     text-align: center;
@@ -6573,13 +6550,13 @@ img {
     text-decoration: none;
     color: #222;
   }
-  .submenu li a:hover, .submenu li a:focus-visible {
+  .submenu li a:hover {
     color: #956e45;
     cursor: pointer;
   }
   .submenu li a:focus-visible {
-    outline: #956e45 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   .submenu li a::after {
     counter-increment: my-counter;
@@ -6690,13 +6667,13 @@ img {
     color: #555;
     position: relative;
   }
-  .thumbnail a:hover, .thumbnail a:focus-visible {
+  .thumbnail a:hover {
     color: #956e45;
     cursor: pointer;
   }
   .thumbnail a:focus-visible {
-    outline: #956e45 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   .thumbnail a:focus-visible:before {
     content: "";
@@ -6981,11 +6958,15 @@ img {
     background: url(../images/basic/icon_share.svg) no-repeat center center;
     background-size: 24px;
   }
-  .functionPanel .share .shareButton:hover, .functionPanel .share .shareButton:focus-visible {
+  .functionPanel .share .shareButton:focus-visible, .functionPanel .share .shareButton:hover {
     background: #956e45;
   }
-  .functionPanel .share .shareButton:hover:before, .functionPanel .share .shareButton:focus-visible:before {
+  .functionPanel .share .shareButton:focus-visible:before, .functionPanel .share .shareButton:hover:before {
     filter: invert(100%);
+  }
+  .functionPanel .share .shareButton:focus-visible {
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   .functionPanel .share ul {
     display: none;
@@ -7017,12 +6998,11 @@ img {
     padding: 0;
     width: 32px;
     height: 32px;
-    border-radius: 50%;
   }
-  .functionPanel .share ul li a:hover, .functionPanel .share ul li a:focus-visible {
+  .functionPanel .share ul li a:hover {
     background: transparent;
   }
-  .functionPanel .share ul li a:hover img, .functionPanel .share ul li a:focus-visible img {
+  .functionPanel .share ul li a:hover img {
     filter: grayscale(1);
   }
   .marquee .swiperBox {
@@ -7766,8 +7746,8 @@ img {
     text-align: left;
   }
   .mobileSidebar .mobileArea .sideMainMenu a:focus-visible {
-    outline: #c3a17d 2px solid;
-    outline-offset: -2px;
+    outline: #c3a17d 3px solid;
+    outline-offset: -3px;
   }
   .mobileSidebar .mobileArea .sideMainMenu > ul > li {
     transform: scale(1.15) translateX(-30px);
@@ -7999,8 +7979,8 @@ img {
   }
   .mobileSidebar button.sidebarClose:focus-visible {
     display: block;
-    outline: #735636 2px solid;
-    outline-offset: -2px;
+    outline: #735636 3px solid;
+    outline-offset: -3px;
     isolation: isolate;
     opacity: 1 !important;
   }
@@ -8268,6 +8248,10 @@ img {
       background-size: contain;
     }
   }
+  .swiperArrow:focus-visible {
+    outline: red 3px solid;
+    outline-offset: -3px;
+  }
   .cpSlider .swiper {
     margin: 0 40px;
     background: #fff;
@@ -8377,18 +8361,22 @@ img {
     aspect-ratio: 1;
     font-size: 14px;
     margin: 0;
-    border: none !important;
+    border: none;
+    width: 48px;
+    height: 48px;
+    white-space: nowrap;
+    border: 2px solid #fff;
   }
   .mpSlider .controlBox button.active {
-    background: #735636;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
   }
   .mpSlider .swiper-slide > a {
     display: block;
   }
   .mpSlider .swiper-slide > a:focus-visible {
     display: block;
-    outline: #c3a17d 2px solid;
-    outline-offset: -2px;
     isolation: isolate;
     opacity: 1 !important;
   }
@@ -9108,8 +9096,6 @@ img {
   .newsSlider .swiper-slide > a:focus-visible,
   .eventSlider .swiper-slide > a:focus-visible {
     display: block;
-    outline: #735636 2px solid;
-    outline-offset: -2px;
     isolation: isolate;
     opacity: 1 !important;
   }
@@ -9248,8 +9234,6 @@ img {
   }
   .winnerSlider .swiper-slide > a:focus-visible {
     display: block;
-    outline: #735636 2px solid;
-    outline-offset: -2px;
     isolation: isolate;
     opacity: 1 !important;
   }
@@ -9400,8 +9384,6 @@ img {
     max-width: 70.5rem;
   }
   .activitiesSection .activitiesSwiper .swiper-slide > a:focus-visible {
-    outline: #735636 2px solid;
-    outline-offset: -2px;
     isolation: isolate;
     opacity: 1 !important;
   }
@@ -9818,13 +9800,13 @@ img {
     text-decoration: none;
     color: #a57a4d;
   }
-  .cp a:hover, .apply a:hover, .award a:hover, .cp a:focus-visible, .apply a:focus-visible, .award a:focus-visible {
+  .cp a:hover, .apply a:hover, .award a:hover {
     color: #956e45;
     cursor: pointer;
   }
   .cp a:focus-visible, .apply a:focus-visible, .award a:focus-visible {
-    outline: #956e45 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   .cp .publishInfo, .apply .publishInfo, .award .publishInfo {
     font-size: 0.875em;
@@ -10105,6 +10087,9 @@ img {
   .fileDownload li span.file_ppt a:hover, .fileDownload li span.file_ppt a:focus-visible, .fileDownload li span.file_pptx a:hover, .fileDownload li span.file_pptx a:focus-visible, .fileDownload li span.file_odp a:hover, .fileDownload li span.file_odp a:focus-visible, .fileDownload li span.file_pdf a:hover, .fileDownload li span.file_pdf a:focus-visible {
     background: #b25135;
   }
+  .fileDownload li span.file_ppt a:focus-visible, .fileDownload li span.file_pptx a:focus-visible, .fileDownload li span.file_odp a:focus-visible, .fileDownload li span.file_pdf a:focus-visible {
+    outline: 3px solid #1265ff;
+  }
   .fileDownload li span.file_pdf a {
     background: #c00;
   }
@@ -10116,6 +10101,9 @@ img {
   }
   .fileDownload li span.file_zip a:hover, .fileDownload li span.file_zip a:focus-visible {
     background: #e96117;
+  }
+  .fileDownload li span.file_zip a:focus-visible {
+    outline: 3px solid #1265ff;
   }
   .fileDownload li span.file_txt a, .fileDownload li span.file_other a {
     background: #555;
@@ -10186,13 +10174,13 @@ img {
     text-decoration: none;
     color: #222;
   }
-  .webLink li a:hover, .award .fileLink li a:hover, .webLink li a:focus-visible, .award .fileLink li a:focus-visible {
+  .webLink li a:hover, .award .fileLink li a:hover {
     color: #956e45;
     cursor: pointer;
   }
   .webLink li a:focus-visible, .award .fileLink li a:focus-visible {
-    outline: #956e45 2px solid;
-    outline-offset: -2px;
+    outline: red 3px solid;
+    outline-offset: -3px;
   }
   .Syncing_slider {
     margin-bottom: 2rem;
@@ -10651,13 +10639,6 @@ img {
     color: #000;
     background-color: #e9e9e9;
   }
-  .mobileSidebar .mobileArea a:focus-visible,
-  .mobileSidebar .mobileArea button:focus-visible {
-    outline: #c3a17d 2px solid;
-  }
-  .mobileSidebar button.sidebarClose:focus-visible {
-    outline: #c3a17d 2px solid;
-  }
   .industrySlider {
     margin-top: 3.75rem;
   }
@@ -10693,8 +10674,6 @@ img {
     border-radius: 0 !important;
   }
   .industrySlider .swiper-pagination-bullet:focus-visible {
-    outline: #c3a17d 2px solid;
-    outline-offset: -2px;
     opacity: 1 !important;
   }
   .industrySlider .swiper-slide > a {
@@ -10702,8 +10681,6 @@ img {
   }
   .industrySlider .swiper-slide > a:focus-visible {
     display: block;
-    outline: #c3a17d 2px solid;
-    outline-offset: -2px;
     isolation: isolate;
     opacity: 1 !important;
   }
@@ -10886,8 +10863,6 @@ img {
   .newsSlider .swiper-slide > a:focus-visible,
   .eventSlider .swiper-slide > a:focus-visible {
     display: block;
-    outline: #735636 2px solid;
-    outline-offset: -2px;
     isolation: isolate;
     opacity: 1 !important;
   }
@@ -10985,8 +10960,6 @@ img {
   }
   .recommendSlider .swiper-slide > a:focus-visible {
     display: block;
-    outline: #735636 2px solid;
-    outline-offset: -2px;
     isolation: isolate;
     opacity: 1 !important;
   }
@@ -11045,8 +11018,6 @@ img {
     background-size: cover;
   }
   .activitiesSection .activitiesSwiper .swiper-slide > a:focus-visible {
-    outline: #735636 2px solid;
-    outline-offset: -2px;
     isolation: isolate;
     opacity: 1 !important;
   }
