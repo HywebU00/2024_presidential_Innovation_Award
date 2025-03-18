@@ -59,6 +59,10 @@ window.addEventListener('load', () => {
       prevEl: '.cpSlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
     breakpoints: {
       100: {
         slidesPerView: 2,
@@ -98,6 +102,10 @@ window.addEventListener('load', () => {
       nextEl: '.mpSlider .nextSlider', //自行設定樣式
       prevEl: '.mpSlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
     },
     breakpoints: {
       100: {
@@ -171,6 +179,10 @@ window.addEventListener('load', () => {
       prevEl: '.industrySlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
     breakpoints: {
       100: {
         slidesPerView: 1,
@@ -230,6 +242,10 @@ window.addEventListener('load', () => {
       nextEl: '.newsSlider .nextSlider', //自行設定樣式
       prevEl: '.newsSlider .prevSlider', //自行設定樣式
       disabledClass: '.newsSlider swiperArrow-disabled', //不可點選樣式
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
     },
     breakpoints: {
       100: {
@@ -309,6 +325,10 @@ window.addEventListener('load', () => {
       prevEl: '.winnerSlider .prevSlider', //自行設定樣式
       disabledClass: '.winnerSlider swiperArrow-disabled', //不可點選樣式
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
     breakpoints: {
       767: {
         slidesPerView: 3,
@@ -343,6 +363,10 @@ window.addEventListener('load', () => {
       prevEl: '.recommendSlider .prevSlider', //自行設定樣式
       disabledClass: '.recommendSlider swiperArrow-disabled', //不可點選樣式
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
     breakpoints: {
       480: {
         slidesPerView: 2,
@@ -373,6 +397,10 @@ window.addEventListener('load', () => {
       nextEl: '.activitiesSection .nextSlider', //自行設定樣式
       prevEl: '.activitiesSection .prevSlider', //自行設定樣式
       disabledClass: '.activitiesSection swiperArrow-disabled', //不可點選樣式
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
     },
     breakpoints: {
       100: {
@@ -409,6 +437,10 @@ window.addEventListener('load', () => {
       nextEl: '.adSlider .nextSlider', //自行設定樣式
       prevEl: '.adSlider .prevSlider', //自行設定樣式
       disabledClass: '.adSlider swiperArrow-disabled', //不可點選樣式
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
     },
     breakpoints: {
       100: {
@@ -452,6 +484,10 @@ window.addEventListener('load', () => {
       prevEl: '.navSlider .prevSlider', //前一張class，無障礙設定關係需要增加.prevSlider
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
     breakpoints: {
       100: {
         slidesPerView: 2,
@@ -480,6 +516,10 @@ window.addEventListener('load', () => {
     pagination: {
       el: '.sliderFor .pagination',
       type: 'fraction', //顯示分頁
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
     },
     lazy: true,
     thumbs: {
