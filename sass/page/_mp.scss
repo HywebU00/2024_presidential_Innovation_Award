@@ -1080,6 +1080,10 @@ section {
       display: flex;
       flex-direction: column;
 
+      &:focus-visible {
+        display: flex !important;
+      }
+
       .subtitle {
         color: #302a20;
       }

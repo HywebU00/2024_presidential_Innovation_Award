@@ -9282,6 +9282,9 @@ img {
     display: flex;
     flex-direction: column;
   }
+  .winnerSlider .swiper-slide a:focus-visible {
+    display: flex !important;
+  }
   .winnerSlider .swiper-slide a .subtitle {
     color: #302a20;
   }
