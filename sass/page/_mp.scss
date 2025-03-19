@@ -1034,6 +1034,8 @@ section {
       // height: rem(326);
       height: rem(280);
       overflow: hidden;
+      margin-bottom: -80px;
+      position: relative;
 
       img {
         object-fit: cover;
@@ -1041,8 +1043,6 @@ section {
         width: 100%;
         height: 100%;
       }
-
-      position: relative;
 
       &::before {
         width: 100%;
@@ -1068,27 +1068,59 @@ section {
       color: #909090;
       line-height: 1.15em;
       margin-bottom: 0.75rem;
+      order: 2;
     }
 
     .subtitle {
       color: #909090;
+      order: 3;
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        .subtitle {
+          color: #302a20;
+        }
+
+        .title {
+          color: #302a20;
+        }
+
+        .pic {
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+          &::before {
+            background: rgba(0, 0, 0, 0);
+          }
+
+          &::after {
+            background-color: $colorPrimary;
+          }
+        }
+      }
     }
 
     .sticker {
-      height: rem(135);
-      width: rem(135);
-      display: none;
-      position: absolute;
-      top: 20%;
+      height: rem(110);
+      width: rem(110);
+      position: relative;
+      // position: absolute;
+      // top: 20%;
       border-radius: 50%;
-      left: -55px;
+      // left: 20px;
       background: $colorPrimary;
       color: #fff;
+      display: flex;
       justify-content: center;
       align-items: center;
       line-height: 1.5em;
       text-align: center;
       font-size: 1em;
+      margin-left: 10px;
+      order: 1;
 
       span {
         display: block;
@@ -1096,9 +1128,9 @@ section {
       }
 
       @media screen and (max-width: 1200px) {
-        height: rem(130);
-        width: rem(130);
-        left: -40px;
+        height: rem(100);
+        width: rem(100);
+        // left: -40px;
 
         span {
           font-size: 1.15em;
@@ -1108,7 +1140,7 @@ section {
       @include screen('mobile') {
         height: rem(120);
         width: rem(120);
-        left: 10px;
+        // left: 10px;
 
         span {
           font-size: 1em;
@@ -1116,31 +1148,31 @@ section {
       }
     }
 
-    &.swiper-slide-active {
-      .subtitle {
-        color: #302a20;
-      }
+    // &.swiper-slide-active {
+    //   .subtitle {
+    //     color: #302a20;
+    //   }
 
-      .title {
-        color: #302a20;
-      }
+    //   .title {
+    //     color: #302a20;
+    //   }
 
-      .pic {
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    //   .pic {
+    //     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 
-        &::before {
-          background: rgba(0, 0, 0, 0);
-        }
+    //     &::before {
+    //       background: rgba(0, 0, 0, 0);
+    //     }
 
-        &::after {
-          background-color: $colorPrimary;
-        }
-      }
+    //     &::after {
+    //       background-color: $colorPrimary;
+    //     }
+    //   }
 
-      .sticker {
-        display: flex;
-      }
-    }
+    //   .sticker {
+    //     display: flex;
+    //   }
+    // }
   }
 
   .swiper-scrollbar {
@@ -1175,7 +1207,6 @@ section {
     .swiper-slide {
       a {
         padding: 0 3em;
-        display: block;
       }
 
       .sticker {

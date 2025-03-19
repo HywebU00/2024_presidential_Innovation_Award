@@ -304,10 +304,10 @@ window.addEventListener('load', () => {
   }
   const winnerSwiper = new Swiper('.winnerSlider .swiper', {
     slidesPerView: 1,
-    spaceBetween: 70,
+    spaceBetween: 30,
     // loop: winnerSlideLen <= 1 ? false : true,
     loop: false,
-    centeredSlides: true,
+    // centeredSlides: true,
     // 切換點
     pagination: {
       el: '.winnerSlider .swiperDots',

@@ -9241,6 +9241,7 @@ img {
   .winnerSlider .swiper-slide .pic {
     height: 17.5rem;
     overflow: hidden;
+    margin-bottom: -80px;
     position: relative;
   }
   .winnerSlider .swiper-slide .pic img {
@@ -9271,25 +9272,46 @@ img {
     color: #909090;
     line-height: 1.15em;
     margin-bottom: 0.75rem;
+    order: 2;
   }
   .winnerSlider .swiper-slide .subtitle {
     color: #909090;
+    order: 3;
+  }
+  .winnerSlider .swiper-slide a {
+    display: flex;
+    flex-direction: column;
+  }
+  .winnerSlider .swiper-slide a:hover .subtitle {
+    color: #302a20;
+  }
+  .winnerSlider .swiper-slide a:hover .title {
+    color: #302a20;
+  }
+  .winnerSlider .swiper-slide a:hover .pic {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  }
+  .winnerSlider .swiper-slide a:hover .pic::before {
+    background: rgba(0, 0, 0, 0);
+  }
+  .winnerSlider .swiper-slide a:hover .pic::after {
+    background-color: #2D807B;
   }
   .winnerSlider .swiper-slide .sticker {
-    height: 8.4375rem;
-    width: 8.4375rem;
-    display: none;
-    position: absolute;
-    top: 20%;
+    height: 6.875rem;
+    width: 6.875rem;
+    position: relative;
     border-radius: 50%;
-    left: -55px;
     background: #2D807B;
     color: #fff;
+    display: flex;
     justify-content: center;
     align-items: center;
     line-height: 1.5em;
     text-align: center;
     font-size: 1em;
+    margin-left: 10px;
+    order: 1;
   }
   .winnerSlider .swiper-slide .sticker span {
     display: block;
@@ -9297,9 +9319,8 @@ img {
   }
   @media screen and (max-width: 1200px) {
     .winnerSlider .swiper-slide .sticker {
-      height: 8.125rem;
-      width: 8.125rem;
-      left: -40px;
+      height: 6.25rem;
+      width: 6.25rem;
     }
     .winnerSlider .swiper-slide .sticker span {
       font-size: 1.15em;
@@ -9309,29 +9330,10 @@ img {
     .winnerSlider .swiper-slide .sticker {
       height: 7.5rem;
       width: 7.5rem;
-      left: 10px;
     }
     .winnerSlider .swiper-slide .sticker span {
       font-size: 1em;
     }
-  }
-  .winnerSlider .swiper-slide.swiper-slide-active .subtitle {
-    color: #302a20;
-  }
-  .winnerSlider .swiper-slide.swiper-slide-active .title {
-    color: #302a20;
-  }
-  .winnerSlider .swiper-slide.swiper-slide-active .pic {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-  }
-  .winnerSlider .swiper-slide.swiper-slide-active .pic::before {
-    background: rgba(0, 0, 0, 0);
-  }
-  .winnerSlider .swiper-slide.swiper-slide-active .pic::after {
-    background-color: #2D807B;
-  }
-  .winnerSlider .swiper-slide.swiper-slide-active .sticker {
-    display: flex;
   }
   .winnerSlider .swiper-scrollbar {
     background: #232222 !important;
@@ -9357,7 +9359,6 @@ img {
   @media screen and (max-width: 767px) {
     .winnerSlider .swiper-slide a {
       padding: 0 3em;
-      display: block;
     }
     .winnerSlider .swiper-slide .sticker {
       line-height: 1.5em;
