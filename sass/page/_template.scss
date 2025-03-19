@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   &.noscroll {
     position: static;
@@ -15,22 +17,27 @@ body {
     padding: 0;
   }
 }
+
 .row {
   @include makeRow();
+
   & > div {
     box-sizing: border-box;
   }
 }
+
 // 最外圍預設為100%
 .wrapper {
   width: 100%;
   margin: 0px auto;
+
   @include screen('mobile') {
     background: #fff;
     overflow: hidden;
     overflow-y: auto;
   }
 }
+
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
   margin: 0 auto;
@@ -38,17 +45,25 @@ body {
   position: relative;
   @include containerFixed;
 }
+
 .main {
   position: relative;
   margin: 0 auto;
+
   // @include screen('mobile') {
   //   padding-top: 60px;
   // }
   // 可先設定一個中央區塊最大寬，限制accessKey對齊
   h2 {
     line-height: 1.25em;
+    font-size: rem(32);
+
+    @include screen('tablet') {
+      font-size: rem(22);
+    }
   }
 }
+
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerPage ClassName
 .innerPage {
@@ -58,11 +73,13 @@ body {
     display: flex;
     margin-bottom: 3em;
   }
+
   .centerBlock {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
   }
+
   .leftBlock {
     flex: none;
     flex-basis: 260px;
@@ -71,6 +88,7 @@ body {
     align-self: flex-start;
     position: sticky;
     top: 100px;
+
     &.hidden {
       & + .centerBlock {
         flex: none;
@@ -78,13 +96,16 @@ body {
         max-width: 100%;
       }
     }
+
     & + .centerBlock {
       flex: auto;
       flex-basis: calc(100% - 300px);
       max-width: calc(100% - 300px);
     }
+
     @include screen('tablet') {
       display: none;
+
       & + .centerBlock {
         flex: none;
         flex-basis: 100%;
@@ -93,15 +114,19 @@ body {
     }
   }
 }
+
 .hidden {
   display: none;
 }
+
 .mainMenu {
   > ul {
     > li {
       flex: 0 1 12%;
+
       @include screen('tablet') {
         flex: 0 1 14.28%;
+
         a {
           padding: 0 0.5em;
         }

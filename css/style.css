@@ -1952,6 +1952,7 @@ img {
   select:focus-visible .pic,
   textarea:focus-visible .pic {
     z-index: -2;
+    isolation: isolate;
   }
   a:focus-visible img,
   a:focus-visible .title,
@@ -7595,6 +7596,12 @@ img {
   }
   .main h2 {
     line-height: 1.25em;
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 991px) {
+    .main h2 {
+      font-size: 1.375rem;
+    }
   }
   .innerPage > .container {
     padding-top: 1em;
@@ -8864,7 +8871,7 @@ img {
     padding: 0 50px;
   }
   .blockTitle div {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
   .blockTitle div:first-child {
     font-family: "Assistant", sans-serif;
@@ -9091,16 +9098,7 @@ img {
   .newsSlider .swiper-slide > a,
   .eventSlider .swiper-slide > a {
     display: block;
-  }
-  .newsSlider .swiper-slide > a:focus-visible,
-  .eventSlider .swiper-slide > a:focus-visible {
-    display: block;
-    isolation: isolate;
-    opacity: 1 !important;
-  }
-  .newsSlider .swiper-slide > a:focus-visible .pic,
-  .eventSlider .swiper-slide > a:focus-visible .pic {
-    z-index: -1;
+    position: relative;
   }
   .newsSlider .swiperArrow,
   .eventSlider .swiperArrow {
@@ -9119,6 +9117,7 @@ img {
     background: #fff;
     height: 14.75rem;
     display: flex;
+    position: relative;
   }
   .newsSlider .pic img,
   .eventSlider .pic img {

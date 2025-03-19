@@ -617,7 +617,7 @@ section {
 
 .blockTitle {
   div {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 
     &:first-child {
       font-family: 'Assistant', sans-serif;
@@ -893,18 +893,7 @@ section {
   .swiper-slide {
     & > a {
       display: block;
-
-      &:focus-visible {
-        display: block;
-        // outline: $colorPrimary 3px solid;
-        // outline-offset: -3px;
-        isolation: isolate;
-        opacity: 1 !important;
-
-        .pic {
-          z-index: -1;
-        }
-      }
+      position: relative;
     }
   }
 
@@ -922,6 +911,7 @@ section {
     background: #fff;
     height: rem(236);
     display: flex;
+    position: relative;
 
     img {
       width: 100%;

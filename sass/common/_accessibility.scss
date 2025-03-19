@@ -18,6 +18,7 @@ textarea {
     // }
     .pic {
       z-index: -2;
+      isolation: isolate;
     }
 
     img,
