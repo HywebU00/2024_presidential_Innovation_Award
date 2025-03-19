@@ -9282,19 +9282,19 @@ img {
     display: flex;
     flex-direction: column;
   }
-  .winnerSlider .swiper-slide a:hover .subtitle {
+  .winnerSlider .swiper-slide a .subtitle {
     color: #302a20;
   }
-  .winnerSlider .swiper-slide a:hover .title {
+  .winnerSlider .swiper-slide a .title {
     color: #302a20;
   }
-  .winnerSlider .swiper-slide a:hover .pic {
+  .winnerSlider .swiper-slide a .pic {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
   }
-  .winnerSlider .swiper-slide a:hover .pic::before {
+  .winnerSlider .swiper-slide a .pic::before {
     background: rgba(0, 0, 0, 0);
   }
-  .winnerSlider .swiper-slide a:hover .pic::after {
+  .winnerSlider .swiper-slide a .pic::after {
     background-color: #2D807B;
   }
   .winnerSlider .swiper-slide .sticker {
