@@ -401,7 +401,13 @@ function jsChildren(element, elementCheck) {
 
 // 亂數數字
 function randomFloor(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+    const randomBuffer = new Uint32Array(1);
+    window.crypto.getRandomValues(randomBuffer);
+    let randomNumber = randomBuffer[0] / (0xffffffff + 1);
+
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(randomNumber * (max - min + 1)) + min;
 }
 
 // 亂數英文字
@@ -409,7 +415,7 @@ function randomLetter(max) {
   let text = '';
   let letter = 'abcdefghijklmnopqrstuvwxyz';
 
-  for (let i = 0; i < max; i++) text += letter.charAt(Math.floor(Math.random() * letter.length));
+  for (let i = 0; i < max; i++) text += letter.charAt(randomFloor(0, letter.length - 1));
   return text;
 }
 // -----------------------------------------------------------------------
