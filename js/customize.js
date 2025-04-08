@@ -180,7 +180,7 @@ window.addEventListener('load', () => {
       // bulletElement: 'button',
       // clickable: true,
       renderBullet: function (index, className) {
-        return `<button class="${className} " aria-label="${industrySliderPagination[index]}">0${[index + 1]}</button>`;
+        return `<button class="${className}" tabindex="-1" aria-label="${industrySliderPagination[index]}">0${[index + 1]}</button>`;
       },
       // renderBullet: function (index, className) {
       //   return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
@@ -190,7 +190,7 @@ window.addEventListener('load', () => {
     navigation: {
       nextEl: '.industrySlider .nextSlider', //自行設定樣式
       prevEl: '.industrySlider .prevSlider', //自行設定樣式
-      disabledClass: 'swiperArrow-disabled', //不可點選樣式
+      // disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
     // keyboard: {
     //   enabled: true,
