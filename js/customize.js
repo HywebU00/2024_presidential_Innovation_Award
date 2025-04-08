@@ -179,12 +179,12 @@ window.addEventListener('load', () => {
       el: '.industrySlider .swiperDots',
       // bulletElement: 'button',
       // clickable: true,
-      // renderBullet: function (index, className) {
-      //   return `<button class="${className} " aria-label="${industrySliderPagination[index]}">0${[index + 1]}</button>`;
-      // },
       renderBullet: function (index, className) {
-        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+        return `<button class="${className} " aria-label="${industrySliderPagination[index]}">0${[index + 1]}</button>`;
       },
+      // renderBullet: function (index, className) {
+      //   return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      // },
     },
     // 切換箭頭
     navigation: {
@@ -586,4 +586,10 @@ window.addEventListener('load', () => {
     });
   }
   alertBtn ? hideAlert() : null;
+
+  const allSwiperArrow = document.querySelectorAll('.swiperArrow');
+  allSwiperArrow?.forEach((item) => {
+    item.setAttribute('aria-hidden', 'true');
+    item.setAttribute('tabindex', '-1');
+  });
 })();
