@@ -50,8 +50,11 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.cpSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      },
     },
     // 切換箭頭
     navigation: {
@@ -59,10 +62,10 @@ window.addEventListener('load', () => {
       prevEl: '.cpSlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 2,
@@ -72,6 +75,8 @@ window.addEventListener('load', () => {
       },
     },
   });
+  const cpSwiperPages = document.querySelectorAll('.cpSlider .swiper-pagination-bullet');
+  cpSwiperPages?.forEach((item) => item.addEventListener('click', () => cpSwiper.slideTo(item.dataset.swiperIndex)));
 
   //大圖輪播
   let mpSliderItem = document.querySelectorAll('.mpSlider .swiper-slide');
@@ -91,10 +96,13 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.mpSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      // renderBullet: function (index, className) {
+      //   return `<button class="${className} noFonts" aria-label="${mpSliderPagination[index]}">${mpSliderPagination[index]}</button>`;
+      // },
       renderBullet: function (index, className) {
-        return `<button class="${className} noFonts" aria-label="${mpSliderPagination[index]}">${mpSliderPagination[index]}</button>`;
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
       },
     },
     // 切換箭頭
@@ -103,10 +111,10 @@ window.addEventListener('load', () => {
       prevEl: '.mpSlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 1,
@@ -122,6 +130,8 @@ window.addEventListener('load', () => {
       },
     },
   });
+  const mpSliderPages = document.querySelectorAll('.mpSlider .swiper-pagination-bullet');
+  mpSliderPages?.forEach((item) => item.addEventListener('click', () => mpSlider.slideTo(item.dataset.swiperIndex)));
 
   const mpSwiperLength = document.querySelectorAll('.mpSlider .swiper-slide').length;
 
@@ -167,10 +177,13 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.industrySlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      // renderBullet: function (index, className) {
+      //   return `<button class="${className} " aria-label="${industrySliderPagination[index]}">0${[index + 1]}</button>`;
+      // },
       renderBullet: function (index, className) {
-        return `<button class="${className} " aria-label="${industrySliderPagination[index]}">0${[index + 1]}</button>`;
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
       },
     },
     // 切換箭頭
@@ -179,10 +192,10 @@ window.addEventListener('load', () => {
       prevEl: '.industrySlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 1,
@@ -198,6 +211,8 @@ window.addEventListener('load', () => {
       },
     },
   });
+  const industrySliderPages = document.querySelectorAll('.industrySlider .swiper-pagination-bullet');
+  industrySliderPages?.forEach((item) => item.addEventListener('click', () => industrySlider.slideTo(item.dataset.swiperIndex)));
 
   const industrySliderLength = document.querySelectorAll('.industrySlider .swiper-slide').length;
 
@@ -227,15 +242,18 @@ window.addEventListener('load', () => {
   }
 
   //消息輪播
-  const newsSwiper = new Swiper('.newsSlider .swiper', {
+  const newsSlider = new Swiper('.newsSlider .swiper', {
     slidesPerView: 3,
     spaceBetween: 0,
     loop: false,
     // 切換點
     pagination: {
       el: '.newsSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      },
     },
     // 切換箭頭
     navigation: {
@@ -243,10 +261,10 @@ window.addEventListener('load', () => {
       prevEl: '.newsSlider .prevSlider', //自行設定樣式
       disabledClass: '.newsSlider swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 1,
@@ -262,6 +280,8 @@ window.addEventListener('load', () => {
       },
     },
   });
+  const newsSliderPages = document.querySelectorAll('.newsSlider .swiper-pagination-bullet');
+  newsSliderPages?.forEach((item) => item.addEventListener('click', () => newsSlider.slideTo(item.dataset.swiperIndex)));
 
   //活動輪播
   const eventSlider = new Swiper('.eventSlider .swiper', {
@@ -271,8 +291,11 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.eventSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      },
     },
     // 切換箭頭
     navigation: {
@@ -296,6 +319,9 @@ window.addEventListener('load', () => {
     },
   });
 
+  const eventSliderPages = document.querySelectorAll('.eventSlider .swiper-pagination-bullet');
+  eventSliderPages?.forEach((item) => item.addEventListener('click', () => eventSlider.slideTo(item.dataset.swiperIndex)));
+
   //廣告輪播
   const winnerSlide = document.querySelectorAll('.winnerSlider .swiper-slide');
   let winnerSlideLen;
@@ -311,8 +337,11 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.winnerSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      },
     },
     scrollbar: {
       el: '.swiper-scrollbar',
@@ -325,10 +354,10 @@ window.addEventListener('load', () => {
       prevEl: '.winnerSlider .prevSlider', //自行設定樣式
       disabledClass: '.winnerSlider swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       767: {
         slidesPerView: 3,
@@ -340,6 +369,9 @@ window.addEventListener('load', () => {
     },
   });
 
+  const winnerSwiperPages = document.querySelectorAll('.winnerSlider .swiper-pagination-bullet');
+  winnerSwiperPages?.forEach((item) => item.addEventListener('click', () => winnerSwiper.slideTo(item.dataset.swiperIndex)));
+
   //
   //推薦閱讀
   const recommendSwiper = new Swiper('.recommendSlider .swiper', {
@@ -349,8 +381,11 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.recommendSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      },
     },
     scrollbar: {
       el: '.swiper-scrollbar',
@@ -363,10 +398,10 @@ window.addEventListener('load', () => {
       prevEl: '.recommendSlider .prevSlider', //自行設定樣式
       disabledClass: '.recommendSlider swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       480: {
         slidesPerView: 2,
@@ -381,6 +416,9 @@ window.addEventListener('load', () => {
     },
   });
 
+  const recommendSwiperPages = document.querySelectorAll('.recommendSlider .swiper-pagination-bullet');
+  recommendSwiperPages?.forEach((item) => item.addEventListener('click', () => recommendSwiper.slideTo(item.dataset.swiperIndex)));
+
   //活動花絮
   const activitiesSwiper = new Swiper('.activitiesSwiper .swiper', {
     slidesPerView: 1,
@@ -389,8 +427,11 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.activitiesSwiper .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      },
     },
     // 切換箭頭
     navigation: {
@@ -398,10 +439,10 @@ window.addEventListener('load', () => {
       prevEl: '.activitiesSection .prevSlider', //自行設定樣式
       disabledClass: '.activitiesSection swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 1,
@@ -421,6 +462,9 @@ window.addEventListener('load', () => {
     },
   });
 
+  const activitiesSwiperPages = document.querySelectorAll('.activitiesSwiper .swiper-pagination-bullet');
+  activitiesSwiperPages?.forEach((item) => item.addEventListener('click', () => activitiesSwiper.slideTo(item.dataset.swiperIndex)));
+
   //廣告輪播
   const adSwiper = new Swiper('.adSlider .swiper', {
     slidesPerView: 5,
@@ -429,8 +473,11 @@ window.addEventListener('load', () => {
     // 切換點
     pagination: {
       el: '.adSlider .swiperDots',
-      bulletElement: 'button',
-      clickable: true,
+      // bulletElement: 'button',
+      // clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} noFonts" data-swiper-index="${index}" tabindex="-1"></div>`;
+      },
     },
     // 切換箭頭
     navigation: {
@@ -438,10 +485,10 @@ window.addEventListener('load', () => {
       prevEl: '.adSlider .prevSlider', //自行設定樣式
       disabledClass: '.adSlider swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 1,
@@ -457,6 +504,9 @@ window.addEventListener('load', () => {
       },
     },
   });
+
+  const adSwiperPages = document.querySelectorAll('.adSlider .swiper-pagination-bullet');
+  adSwiperPages?.forEach((item) => item.addEventListener('click', () => adSwiper.slideTo(item.dataset.swiperIndex)));
 
   //跑馬燈
   const marqueeSwiper = new Swiper('.marquee .swiper', {
@@ -484,10 +534,10 @@ window.addEventListener('load', () => {
       prevEl: '.navSlider .prevSlider', //前一張class，無障礙設定關係需要增加.prevSlider
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     breakpoints: {
       100: {
         slidesPerView: 2,
@@ -517,10 +567,10 @@ window.addEventListener('load', () => {
       el: '.sliderFor .pagination',
       type: 'fraction', //顯示分頁
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: false,
+    // },
     lazy: true,
     thumbs: {
       swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
